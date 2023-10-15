@@ -10,8 +10,44 @@ export const Skills = () => {
       <SectionTitle>Skills</SectionTitle>
       <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
         <Skill
+          title="React"
+          iconId="React"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="TypeScript"
+          iconId="TypeScript"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="JavaScript"
+          iconId="JavaScript"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
           title="HTML5"
           iconId="HTML5"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="CSS3"
+          iconId="CSS3"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="Git"
+          iconId="Git"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="Styled Components"
+          iconId="StyledComponents"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
         in faucibus feugiat."
         />

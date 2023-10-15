@@ -7,11 +7,17 @@ import { Skill } from "./skill/Skill";
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>Skills</SectionTitle>
+      <SectionTitle>MY SKILLS</SectionTitle>
       <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
         <Skill
           title="React"
           iconId="React"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
+        in faucibus feugiat."
+        />
+        <Skill
+          title="Redux"
+          iconId="Redux"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
         in faucibus feugiat."
         />

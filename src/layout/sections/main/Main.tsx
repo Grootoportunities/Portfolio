@@ -6,15 +6,9 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexWrapper
-        alignItems={"center"}
-        justifyContent={"space-evenly"}
-        backgroundColor={"#A6BCFA"}
-        width={"1158px"}
-        height={"508px"}
-      >
+      <About>
         <Photo />
-        <div>
+        <FlexWrapper direction={"column"} justifyContent={"space-between"}>
           <Name>I'm Daniil Lameika</Name>
           <MainTitle>A Web Developer</MainTitle>
           <p>
@@ -25,11 +19,20 @@ export const Main = () => {
             <button>See Projects</button>
             <button>Download Resume</button>
           </RegisterButtons>
-        </div>
-      </FlexWrapper>
+        </FlexWrapper>
+      </About>
     </StyledMain>
   );
 };
+
+const About = styled.article`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #a6bcfa;
+  width: 1158px;
+  padding: 42px 130px 40px 104px;
+`;
 
 const RegisterButtons = styled.div`
   display: flex;

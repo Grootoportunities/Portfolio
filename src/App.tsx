@@ -3,6 +3,7 @@ import { Header } from "./layout/header/Header";
 import { Main } from "./layout/sections/main/Main";
 import { Skills } from "./layout/sections/skills/Skills";
 import { Projects } from "./layout/sections/projects/Projects";
+import { Biography } from "./layout/sections/biography/Biography";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Main />
       <Projects />
+      <Biography />
       <Skills />
     </div>
   );

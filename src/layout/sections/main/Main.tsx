@@ -3,6 +3,7 @@ import styled from "styled-components";
 import photo from "../../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { App } from "./app/App.styled";
+import { Button } from "../../../components/Button";
 
 export const Main = () => {
   return (
@@ -17,8 +18,8 @@ export const Main = () => {
             ipsum in justo vestibulum vulputate.
           </p>
           <RegisterButtons>
-            <button>See Projects</button>
-            <button>Download Resume</button>
+            <Button>See Projects</Button>
+            <Button>Download Resume</Button>
           </RegisterButtons>
         </FlexWrapper>
       </About>

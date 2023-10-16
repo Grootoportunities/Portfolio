@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import photo from "../../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { App } from "./app/App.styled";
 
 export const Main = () => {
   return (
@@ -21,9 +22,21 @@ export const Main = () => {
           </RegisterButtons>
         </FlexWrapper>
       </About>
+      <Apps>
+        <FlexWrapper gap={"13px"}>
+          <App iconId={"VSCode"} title={"VS Code"} />
+          <App iconId={"WebStorm"} title={"WebStorm"} />
+          <App iconId={"GithubDesktop"} title={"Github Desktop"} />
+        </FlexWrapper>
+      </Apps>
     </StyledMain>
   );
 };
+
+const Apps = styled.div`
+  align-self: flex-end;
+  margin-right: 258px;
+`;
 
 const About = styled.article`
   display: flex;
@@ -45,9 +58,10 @@ const MainTitle = styled.h1``;
 
 const StyledMain = styled.section`
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #fff;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `;
 

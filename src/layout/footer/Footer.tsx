@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import logoImage from "../../assets/images/Logo__3_-removebg-preview.png";
+import logoImage from "../../assets/images/Logo__3_-removebg-preview-_1_.webp";
 import { FlexWrapper } from "../../components/FlexWrapper";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <FlexWrapper direction={"column"} alignItems={"center"}>
+        {/*<Icon iconId={"FooterLogo"} /> todo: SVG не работает */}
         <FooterImage />
-        <Copyright>©2023 Daniil Lameika. All Right Reserved.</Copyright>
+        <Copyright>©2023 Daniil Lameika. All Rights Reserved.</Copyright>
       </FlexWrapper>
     </StyledFooter>
   );

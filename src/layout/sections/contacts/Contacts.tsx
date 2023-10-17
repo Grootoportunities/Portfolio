@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Coordinator } from "./coordinator/Coordinator";
 import { Button } from "../../../components/Button";
-import { Social } from "./social/Social";
+import { Socials } from "../../../components/socials/Socials";
 
 // const iconsCoordinators = ["location", "telephone", "email"];
 // const titles = ["Location", "Phone", "Email"];
@@ -37,7 +37,7 @@ export const Contacts = () => {
             {/*  iconId={iconsCoordinators}*/}
             {/*  title={titles}*/}
             {/*  text={texts}*/}
-            {/*/> todo: Не получается мапом*/}
+            {/*/> todo: Не получается сделать структуру мапом*/}
             <Coordinator
               iconId={"location"}
               title={"Location"}
@@ -55,9 +55,7 @@ export const Contacts = () => {
             />
           </Coordinators>
         </Contact>
-        <Socials>
-          <Social iconId={iconsSocial} />
-        </Socials>
+        <Socials iconId={iconsSocial} />
       </FlexWrapper>
     </StyledContacts>
   );
@@ -76,13 +74,6 @@ const Contact = styled.article`
 
   max-width: 932px;
   width: 100%;
-`;
-
-const Socials = styled.article`
-  //border: 1px solid blue; //todo: to delete when fix
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const StyledForm = styled.form`

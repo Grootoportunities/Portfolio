@@ -39,7 +39,6 @@ export const Coordinator = (props: CoordinatorPropsType) => {
 
 const StyledCoordinator = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center; //todo: Почему работает  только на первый координатор?
   //border: 1px solid black;
 

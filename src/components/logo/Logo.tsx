@@ -5,7 +5,7 @@ import logoImage from "../../assets/images/Logo__4_-removebg-preview.png";
 export const Logo = () => {
   return (
     <div>
-      <a>
+      <a href=" ">
         <LogoImage />
       </a>
     </div>

@@ -2,12 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
 
-// type CoordinatorPropsType = {
-//   iconId: Array<string>;
-//   title: Array<string>;
-//   text: Array<string>;
-// };
-
 type CoordinatorPropsType = {
   iconId: string;
   title: string;
@@ -15,19 +9,9 @@ type CoordinatorPropsType = {
 };
 
 export const Coordinator = (props: CoordinatorPropsType) => {
+  // console.log(props.coordinatorsData);
   return (
     <StyledCoordinator>
-      {/*{props.iconId.map((item) => {*/}
-      {/*  return <Icon iconId={item} />;*/}
-      {/*})}*/}
-      {/*<Info>*/}
-      {/*  {props.title.map((item) => {*/}
-      {/*    return <CoordinatorTitle>{item}</CoordinatorTitle>;*/}
-      {/*  })}*/}
-      {/*  {props.text.map((item) => {*/}
-      {/*    return <CoordinatorText>{item}</CoordinatorText>;*/}
-      {/*  })}*/}
-      {/*</Info>*/}
       <Icon iconId={props.iconId} />
       <Info>
         <CoordinatorTitle>{props.title}</CoordinatorTitle>

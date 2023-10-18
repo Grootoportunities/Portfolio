@@ -6,11 +6,29 @@ import { Coordinator } from "./coordinator/Coordinator";
 import { Button } from "../../../components/Button";
 import { Socials } from "../../../components/socials/Socials";
 
-// const iconsCoordinators = ["location", "telephone", "email"];
-// const titles = ["Location", "Phone", "Email"];
-// const texts = ["Minsk", "+375 (29) 829-87-12", "tapir1337@mail.ru"];
+const iconsCoordinators = ["location", "telephone", "email"];
+const titles = ["Location", "Phone", "Email"];
+const texts = ["Minsk", "+375 (29) 829-87-12", "tapir1337@mail.ru"];
 
 const iconsSocial = ["Instagram", "Telegram"];
+
+const coordinatorsData = [
+  {
+    iconId: "location",
+    title: "Location",
+    text: "Minsk",
+  },
+  {
+    iconId: "telephone",
+    title: "Phone",
+    text: "Email",
+  },
+  {
+    iconId: "email",
+    title: "Email",
+    text: "tapir1337@mail.ru",
+  },
+];
 
 export const Contacts = () => {
   return (
@@ -26,33 +44,38 @@ export const Contacts = () => {
           <StyledForm>
             <FormTitle>GET IN TOUCH</FormTitle>
             <FieldArea>
-              <Field placeholder={"E-Mail"} />
-              <Field placeholder={"Phone"} />
+              <Field placeholder={"E-Mail"} type={"email"} name={"email"} />
+              <Field placeholder={"Phone"} type={"number"} name={"Phone"} />
             </FieldArea>
             <Field placeholder={"Message"} as={"textarea"} />
             <Button type="submit">Send</Button>
           </StyledForm>
           <Coordinators>
+            {coordinatorsData.map((item) => {
+              return (
+                <Coordinator
+                  iconId={item.iconId}
+                  title={item.title}
+                  text={item.text}
+                />
+              );
+            })}
+            {/*<Coordinator coordinatorsData={coordinatorsData} />*/}
             {/*<Coordinator*/}
-            {/*  iconId={iconsCoordinators}*/}
-            {/*  title={titles}*/}
-            {/*  text={texts}*/}
-            {/*/> todo: Не получается сделать структуру мапом*/}
-            <Coordinator
-              iconId={"location"}
-              title={"Location"}
-              text={"Minsk"}
-            />
-            <Coordinator
-              iconId={"telephone"}
-              title={"Phone"}
-              text={"+375 (29) 829-87-12"}
-            />
-            <Coordinator
-              iconId={"email"}
-              title={"Email"}
-              text={"tapir1337@mail.ru"}
-            />
+            {/*  iconId={"location"}*/}
+            {/*  title={"Location"}*/}
+            {/*  text={"Minsk"}*/}
+            {/*/>*/}
+            {/*<Coordinator*/}
+            {/*  iconId={"telephone"}*/}
+            {/*  title={"Phone"}*/}
+            {/*  text={"+375 (29) 829-87-12"}*/}
+            {/*/>*/}
+            {/*<Coordinator*/}
+            {/*  iconId={"email"}*/}
+            {/*  title={"Email"}*/}
+            {/*  text={"tapir1337@mail.ru"}*/}
+            {/*/>*/}
           </Coordinators>
         </Contact>
         <Socials iconId={iconsSocial} />

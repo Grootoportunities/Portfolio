@@ -7,6 +7,34 @@ import socialIMG from "./../../../assets/images/social-networking-184313840_3849
 import todolist from "./../../../assets/images/hand-drawn-essay-illustration_23-2150292643-_1_.webp";
 import counter from "./../../../assets/images/smart-home-app_23-2148620419-_1_.webp";
 import memorizingGame from "./../../../assets/images/animal-memory-card-game_1308-113025-_1_.webp";
+
+const projectData = [
+  {
+    title: "SOCIAL NETWORK",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim.",
+    imgSrc: socialIMG,
+  },
+  {
+    title: "TODOLIST",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim.",
+    imgSrc: todolist,
+  },
+  {
+    title: "COUNTER",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim.",
+    imgSrc: counter,
+  },
+  {
+    title: "MEMORIZING GAME",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim.",
+    imgSrc: memorizingGame,
+  },
+];
+
 export const Projects = () => {
   return (
     <StyledProjects>
@@ -16,34 +44,15 @@ export const Projects = () => {
         alignItems={"center"}
         wrap={"wrap"}
       >
-        <Project
-          title={"SOCIAL NETWORK"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim."
-          }
-          src={socialIMG}
-        />
-        <Project
-          title={"TODOLIST"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim."
-          }
-          src={todolist}
-        />
-        <Project
-          title={"COUNTER"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim."
-          }
-          src={counter}
-        />
-        <Project
-          title={"MEMORIZING GAME"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel volutpat lacus, a tempor ligula. Fusce congue pulvinar imperdiet. Aenean malesuada, augue eu efficitur vestibulum, est ipsum gravida arcu, non fringilla velit nisl vitae enim."
-          }
-          src={memorizingGame}
-        />
+        {projectData.map((item) => {
+          return (
+            <Project
+              title={item.title}
+              description={item.description}
+              imgSrc={item.imgSrc}
+            />
+          );
+        })}
       </FlexWrapper>
     </StyledProjects>
   );

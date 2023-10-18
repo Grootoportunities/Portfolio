@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 type ProjectPropsType = {
-  src: string;
+  imgSrc: string;
   title: string;
   description: string;
 };
@@ -10,7 +10,7 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
   return (
     <StyledProject>
-      <Image src={props.src} alt={"Project"} />
+      <Image src={props.imgSrc} alt={"Project"} />
       <Title>{props.title}</Title>
       <Description>{props.description}</Description>
       <Link href="#">VIEW CODE</Link>

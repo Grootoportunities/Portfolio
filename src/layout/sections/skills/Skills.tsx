@@ -4,59 +4,59 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
 
+const skillData = [
+  {
+    title: "React",
+    iconId: "React",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "Redux",
+    iconId: "Redux",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "TypeScript",
+    iconId: "TypeScript",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "JavaScript",
+    iconId: "JavaScript",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "HTML5",
+    iconId: "HTML5",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "CSS3",
+    iconId: "CSS3",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "Git",
+    iconId: "Git",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+  {
+    title: "Styled Components",
+    iconId: "StyledComponents",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+  },
+];
+
 export const Skills = () => {
   return (
     <StyledSkills>
       <SectionTitle>MY SKILLS</SectionTitle>
       <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
-        <Skill
-          title="React"
-          iconId="React"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="Redux"
-          iconId="Redux"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="TypeScript"
-          iconId="TypeScript"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="JavaScript"
-          iconId="JavaScript"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="HTML5"
-          iconId="HTML5"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="CSS3"
-          iconId="CSS3"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="Git"
-          iconId="Git"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
-        <Skill
-          title="Styled Components"
-          iconId="StyledComponents"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros
-        in faucibus feugiat."
-        />
+        {skillData.map((item) => {
+          return (
+            <Skill title={item.title} iconId={item.iconId} text={item.text} />
+          );
+        })}
       </FlexWrapper>
     </StyledSkills>
   );

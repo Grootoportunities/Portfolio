@@ -9,7 +9,6 @@ type CoordinatorPropsType = {
 };
 
 export const Coordinator = (props: CoordinatorPropsType) => {
-  // console.log(props.coordinatorsData);
   return (
     <StyledCoordinator>
       <Icon iconId={props.iconId} />
@@ -24,7 +23,6 @@ export const Coordinator = (props: CoordinatorPropsType) => {
 const StyledCoordinator = styled.div`
   display: flex;
   align-items: center; //todo: Почему работает  только на первый координатор?
-  //border: 1px solid black;
 
   max-width: 180px;
   width: 100%;

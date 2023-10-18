@@ -5,6 +5,24 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { App } from "./app/App.styled";
 import { Button } from "../../../components/Button";
 
+const appData = [
+  {
+    iconId: "VSCode",
+    title: "VS Code",
+    viewBox: "0 0 100 100",
+  },
+  {
+    iconId: "WebStorm",
+    title: "WebStorm",
+    viewBox: "0 0 250 250",
+  },
+  {
+    iconId: "GithubDesktop",
+    title: "Github Desktop",
+    viewBox: "0 0 20 20",
+  },
+];
+
 export const Main = () => {
   return (
     <StyledMain>
@@ -25,9 +43,15 @@ export const Main = () => {
       </About>
       <Apps>
         <FlexWrapper gap={"13px"}>
-          <App iconId={"VSCode"} title={"VS Code"} />
-          <App iconId={"WebStorm"} title={"WebStorm"} />
-          <App iconId={"GithubDesktop"} title={"Github Desktop"} />
+          {appData.map((item) => {
+            return (
+              <App
+                iconId={item.iconId}
+                title={item.title}
+                viewBox={item.viewBox}
+              />
+            );
+          })}
         </FlexWrapper>
       </Apps>
     </StyledMain>

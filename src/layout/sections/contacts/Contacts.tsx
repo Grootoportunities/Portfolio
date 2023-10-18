@@ -6,10 +6,6 @@ import { Coordinator } from "./coordinator/Coordinator";
 import { Button } from "../../../components/Button";
 import { Socials } from "../../../components/socials/Socials";
 
-const iconsCoordinators = ["location", "telephone", "email"];
-const titles = ["Location", "Phone", "Email"];
-const texts = ["Minsk", "+375 (29) 829-87-12", "tapir1337@mail.ru"];
-
 const iconsSocial = ["Instagram", "Telegram"];
 
 const coordinatorsData = [
@@ -60,22 +56,6 @@ export const Contacts = () => {
                 />
               );
             })}
-            {/*<Coordinator coordinatorsData={coordinatorsData} />*/}
-            {/*<Coordinator*/}
-            {/*  iconId={"location"}*/}
-            {/*  title={"Location"}*/}
-            {/*  text={"Minsk"}*/}
-            {/*/>*/}
-            {/*<Coordinator*/}
-            {/*  iconId={"telephone"}*/}
-            {/*  title={"Phone"}*/}
-            {/*  text={"+375 (29) 829-87-12"}*/}
-            {/*/>*/}
-            {/*<Coordinator*/}
-            {/*  iconId={"email"}*/}
-            {/*  title={"Email"}*/}
-            {/*  text={"tapir1337@mail.ru"}*/}
-            {/*/>*/}
           </Coordinators>
         </Contact>
         <Socials iconId={iconsSocial} />

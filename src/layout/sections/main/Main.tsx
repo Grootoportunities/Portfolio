@@ -68,7 +68,8 @@ const About = styled.article`
   justify-content: space-evenly;
   align-items: center;
   background-color: #a6bcfa;
-  width: 1158px;
+  max-width: 1158px;
+  width: 100%;
   padding: 42px 130px 40px 104px;
 `;
 

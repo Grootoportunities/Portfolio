@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Theme } from "../../../styles/Theme";
+import { Icon } from "../../../components/icon/Icon";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -12,6 +14,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
             </ListItem>
           );
         })}
+        {/*<Icon iconId={"Moon"} />*/}
       </ul>
     </StyledHeaderMenu>
   );
@@ -20,59 +23,66 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
+    justify-content: center;
     gap: 58px;
   }
 `;
 
 const Link = styled.a`
-  color: #393939;
+  color: ${Theme.colors.font.pramiary.light};
   text-align: center;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-
-  //for fun
 `;
 
 const ListItem = styled.li`
-  &:hover,
+  position: relative;
+
+  &:hover {
+    letter-spacing: 5px;
+
+    &::before {
+      transform: scale(1);
+    }
+
+    &::after {
+      transform: scale(1);
+    }
+  }
+
   &:active {
-    ${Link} {
-      letter-spacing: 5px;
-    }
+    transform: translateY(2px);
   }
 
-  &:after,
-  &:before {
-    ${Link} {
-      backface-visibility: hidden;
-      border: 1px solid rgba(#fff, 0);
-      bottom: 0;
-      content: " ";
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      transition: all 280ms ease-in-out;
-      width: 0;
-    }
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    background-color: ${Theme.colors.font.pramiary.light};
+
+    position: absolute;
+    top: 130%;
+    right: -10px;
+    left: -10px;
+    z-index: 1;
+
+    transform: scale(0);
   }
 
-  &:hover:after,
-  &:hover:before {
-    ${Link} {
-      backface-visibility: hidden;
-      border-color: #fff;
-      transition: width 350ms ease-in-out;
-      width: 70%;
-    }
-  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    background-color: ${Theme.colors.font.pramiary.light};
 
-  &:hover:before {
-    ${Link} {
-      bottom: auto;
-      top: 0;
-      width: 70%;
-    }
+    position: absolute;
+    bottom: 130%;
+    right: -10px;
+    left: -10px;
+    z-index: 1;
+
+    transform: scale(0);
   }
 `;

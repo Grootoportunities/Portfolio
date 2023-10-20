@@ -8,11 +8,6 @@ type FlexWrapperPropsType = {
   alignSelf?: string;
   wrap?: string;
   gap?: string;
-  // backgroundColor?: string;
-  // width?: string;
-  // height?: string;
-  // padding?: string;
-  // margin?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -24,4 +19,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   align-self: ${(props) => props.alignSelf || "auto"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0"};
+  height: 100%;
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
-import { Icon } from "../../../components/icon/Icon";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
@@ -14,7 +13,6 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
             </ListItem>
           );
         })}
-        {/*<Icon iconId={"Moon"} />*/}
       </ul>
     </StyledHeaderMenu>
   );
@@ -31,10 +29,8 @@ const StyledHeaderMenu = styled.nav`
 const Link = styled.a`
   color: ${Theme.colors.font.pramiary.light};
   text-align: center;
-  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: normal;
 `;
 
 const ListItem = styled.li`
@@ -43,10 +39,7 @@ const ListItem = styled.li`
   &:hover {
     letter-spacing: 5px;
 
-    &::before {
-      transform: scale(1);
-    }
-
+    &::before,
     &::after {
       transform: scale(1);
     }

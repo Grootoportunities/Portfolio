@@ -1,6 +1,7 @@
 export const Theme = {
   colors: {
     primary: "#A6BCFA",
+    primaryBlur: "rgba(166, 188, 250, 0.5)",
     secondary: "#FFFFFF",
     secondaryBlur: "rgba(255, 255, 255, 0.7)",
     accent: "#2157F2",

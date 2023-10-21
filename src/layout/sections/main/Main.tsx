@@ -6,22 +6,34 @@ import { App } from "./app/App.styled";
 import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import { Theme } from "../../../styles/Theme";
+import github from "../../../assets/images/github-desktop-2021-05-20.webp";
+import vscode from "../../../assets/images/Visual_Studio_Code_1.35_icon.svg.webp";
+import webstorm from "../../../assets/images/WebStorm_Icon.svg.webp";
 
 const appData = [
   {
-    iconId: "VSCode",
+    // iconId: "VSCode", todo: Не получается закруглить SVG
     title: "VS Code",
-    viewBox: "0 0 100 100",
+    imgSrc: vscode,
+    // viewBox: "0 0 100 100",
+    // width: "55px",
+    // height: "55px",
   },
   {
-    iconId: "WebStorm",
+    // iconId: "WebStorm",
     title: "WebStorm",
-    viewBox: "0 0 250 250",
+    imgSrc: webstorm,
+    // viewBox: "0 0 250 250",
+    // width: "55px",
+    // height: "55px",
   },
   {
-    iconId: "GithubDesktop",
+    // iconId: "GithubDesktop",
     title: "Github Desktop",
-    viewBox: "0 0 20 20",
+    imgSrc: github,
+    // viewBox: "0 0 20 20",
+    // width: "55px",
+    // height: "55px",
   },
 ];
 
@@ -36,7 +48,11 @@ export const Main = () => {
         >
           <About>
             <Photo />
-            <FlexWrapper direction={"column"} justifyContent={"space-evenly"}>
+            <FlexWrapper
+              direction={"column"}
+              justifyContent={"space-evenly"}
+              gap={"30px"}
+            >
               <Name>I'm</Name>
               <MainTitle>A Web Developer</MainTitle>
               <Description>
@@ -50,13 +66,14 @@ export const Main = () => {
             </FlexWrapper>
           </About>
           <Apps>
-            <FlexWrapper gap={"90px"}>
+            <FlexWrapper gap={"13px"}>
               {appData.map((item) => {
                 return (
                   <App
-                    iconId={item.iconId}
+                    // iconId={item.iconId}
                     title={item.title}
-                    viewBox={item.viewBox}
+                    imgSrc={item.imgSrc}
+                    // viewBox={item.viewBox}
                   />
                 );
               })}
@@ -70,30 +87,9 @@ export const Main = () => {
 
 const Apps = styled.div`
   align-self: flex-end;
-  margin: 80px 258px;
-`;
-
-const About = styled.article`
-  display: flex;
-  justify-content: space-between;
-  //align-items: center;
-
-  background-image: linear-gradient(
-    147deg,
-    ${Theme.colors.primary} -6.76%,
-    #dce6ff 102.96%
-  );
-  border-radius: 200px 0;
-  border: 2px solid #fff;
-  backdrop-filter: blur(10px);
-
-  max-width: 1158px;
-  width: 100%;
-  padding: 43px 130px 41px 104px;
-  margin-top: 188px;
-
+  margin: 47px 258px 80px;
   position: relative;
-  z-index: 0;
+  z-index: -3;
 
   &::before {
     content: "+";
@@ -101,34 +97,41 @@ const About = styled.article`
     color: ${Theme.colors.pseudo};
     background-color: transparent;
     position: absolute;
-    z-index: -1; //todo: Почему не заходит за артикль?
+    z-index: -5; //todo: Почему не заходит за артикль?
 
-    bottom: 86%;
-    left: 372px;
+    bottom: 590px;
+    left: -50px;
     transform: rotate(-45deg);
     text-align: center;
     font-size: 150px;
     font-style: normal;
     font-weight: 600;
   }
+`;
 
-  &::after {
-    content: "";
-    width: 152px;
-    height: 152px;
-    position: absolute;
-    z-index: -1; //todo: тоже
-    border: 20px solid ${Theme.colors.pseudo};
-    border-radius: 50%;
-    right: 25px;
-    bottom: -9px;
-  }
+const About = styled.article`
+  display: flex;
+  justify-content: space-evenly;
+  gap: 76px;
+
+  background-image: linear-gradient(
+    147deg,
+    ${Theme.colors.primaryBlur} -6.76%,
+    ${Theme.colors.secondaryBlur} 102.96%
+  );
+
+  border-radius: 200px 0;
+  border: 2px solid ${Theme.colors.secondary};
+  backdrop-filter: blur(4px);
+  max-width: 1158px;
+  width: 100%;
+  padding: 43px 84px 41px 104px;
+  margin-top: 188px;
 `;
 
 const RegisterButtons = styled.div`
   display: flex;
   gap: 32px;
-  //margin: 42px 0 74px 0;
 `;
 
 const Name = styled.h2`
@@ -146,18 +149,12 @@ const MainTitle = styled.h1`
   color: ${Theme.colors.font.pramiary.light};
   font-size: 60px;
   font-weight: 700;
-  margin: 19px 0;
 `;
 
 const Description = styled.p`
   color: ${Theme.colors.font.pramiary.light};
-
-  /* Body/Main */
-
   font-size: 20px;
-  //todo: Почему удаляем font-style если он не прописан в глобальных стилях?
   font-weight: 400;
-
   max-width: 376px;
   width: 100%;
 `;
@@ -166,18 +163,28 @@ const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
   background-color: #fff;
-
   position: relative;
   z-index: 0;
+
+  &::after {
+    content: "";
+    width: 152px;
+    height: 152px;
+    position: absolute;
+    z-index: -1; //todo: тоже
+    border: 20px solid ${Theme.colors.pseudo};
+    border-radius: 50%;
+    right: 156px;
+    bottom: 242px;
+  }
 
   &::before {
     content: "";
     height: 100%;
     width: 468px;
-
     background-color: ${Theme.colors.primary};
     position: absolute;
-    z-index: -1;
+    z-index: -3;
     left: 0;
   }
 `;
@@ -189,7 +196,6 @@ const Photo = styled.img.attrs(() => ({
   width: 400px;
   height: 400px;
   object-fit: cover;
-
   border-radius: 334px;
   border: 25px solid #fff;
 `;

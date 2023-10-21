@@ -4,37 +4,54 @@ import { Icon } from "../../../../components/icon/Icon";
 import { Theme } from "../../../../styles/Theme";
 
 type AppPropsType = {
-  iconId: string;
+  // iconId: string;
   title: string;
-  width?: string;
-  height?: string;
-  viewBox?: string;
+  imgSrc: string;
+  // width?: string;
+  // height?: string;
+  // viewBox?: string;
 };
 
 export const App = (props: AppPropsType) => {
   return (
     <StyledApp>
-      <Icon
-        iconId={props.iconId}
-        width={props.width}
-        height={props.height}
-        viewBox={props.viewBox}
-      />
+      <AppImg src={props.imgSrc} />
+      {/*<Icon*/}
+      {/*  iconId={props.iconId}*/}
+      {/*  width={props.width}*/}
+      {/*  height={props.height}*/}
+      {/*  viewBox={props.viewBox}*/}
+      {/*/>*/}
       <Title>{props.title}</Title>
     </StyledApp>
   );
 };
 
-const Title = styled.h3``;
+const AppImg = styled.img`
+  height: 57px; //76px;
+  width: 57px; //76px;
+  border-radius: 55px;
+  border: 10px solid ${Theme.colors.secondary};
+  background-color: ${Theme.colors.secondary};
+`;
+
+const Title = styled.h3`
+  color: ${Theme.colors.font.secondary.lighter};
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+`;
 
 const StyledApp = styled.article`
-  //background-color: #a6bcfa;
-  max-width: 160px;
+  min-width: 160px;
   width: 100%;
+  min-height: 124px;
+  padding-bottom: 21px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   position: relative;

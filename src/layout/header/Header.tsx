@@ -15,16 +15,14 @@ export const Header = () => {
       <FlexWrapper justifyContent={"space-around"} alignItems={"center"}>
         <Logo />
         <HeaderMenu menuItems={items} />
-        <Mode>
-          <ModeBtn>
-            <Icon
-              iconId={"Moon"}
-              width={"37px"}
-              height={"37px"}
-              viewBox={"0 0 24 24"}
-            />
-          </ModeBtn>
-        </Mode>
+        <ModeBtn>
+          <Icon
+            iconId={"Moon"}
+            width={"37px"}
+            height={"37px"}
+            viewBox={"0 0 24 24"}
+          />
+        </ModeBtn>
       </FlexWrapper>
     </StyledHeader>
   );
@@ -39,7 +37,5 @@ const StyledHeader = styled.header`
   right: 0;
   z-index: 99999;
 `;
-
-const Mode = styled.div``;
 
 const ModeBtn = styled.button``;

@@ -38,7 +38,9 @@ const projectData = [
 export const Projects = () => {
   return (
     <StyledProjects>
-      <SectionTitle>MY PROJECTS</SectionTitle>
+      <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
+        MY PROJECTS
+      </SectionTitle>
       <FlexWrapper
         justifyContent={"space-evenly"}
         alignItems={"center"}

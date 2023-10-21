@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
+import { Theme } from "../../../styles/Theme";
+import { Container } from "../../../components/Container";
 
 const skillData = [
   {
@@ -50,19 +52,22 @@ const skillData = [
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>MY SKILLS</SectionTitle>
-      <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
-        {skillData.map((item) => {
-          return (
-            <Skill title={item.title} iconId={item.iconId} text={item.text} />
-          );
-        })}
-      </FlexWrapper>
+      <Container>
+        <SectionTitle sectionColor={"primary"} pseudoColor={"primary"}>
+          MY SKILLS
+        </SectionTitle>
+        <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
+          {skillData.map((item) => {
+            return (
+              <Skill title={item.title} iconId={item.iconId} text={item.text} />
+            );
+          })}
+        </FlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  background-color: #a5bbf8;
-  min-height: 100vh;
+  background-color: ${Theme.colors.primary};
 `;

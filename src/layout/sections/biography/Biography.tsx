@@ -8,7 +8,9 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 export const Biography = () => {
   return (
     <StyledBiography>
-      <SectionTitle>ABOUT ME</SectionTitle>
+      <SectionTitle sectionColor={"primary"} pseudoColor={"primary"}>
+        ABOUT ME
+      </SectionTitle>
       <FlexWrapper justifyContent={"center"}>
         <Slider></Slider>
       </FlexWrapper>

@@ -34,6 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
   }
 
+  section {
+    padding: 78px 0; //todo: Узнать почему main наклыдвается на projects
+  }
+  
   // section:nth-of-type(odd) {
   //   background-color: ${Theme.colors.secondary};
   // }

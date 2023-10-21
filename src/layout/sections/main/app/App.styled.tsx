@@ -28,8 +28,8 @@ export const App = (props: AppPropsType) => {
 };
 
 const AppImg = styled.img`
-  height: 57px; //76px;
-  width: 57px; //76px;
+  height: 75px;
+  width: 75px;
   border-radius: 55px;
   border: 10px solid ${Theme.colors.secondary};
   background-color: ${Theme.colors.secondary};

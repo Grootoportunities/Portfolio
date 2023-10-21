@@ -7,6 +7,7 @@ export const Theme = {
     accent: "#2157F2",
     pseudo: "rgba(33, 87, 242, 0.50)",
     shadow: "rgba(0, 0, 0, 0.15)",
+    skill: "#F9F9FC",
 
     gradient: {
       first: "#FFFFFF80",

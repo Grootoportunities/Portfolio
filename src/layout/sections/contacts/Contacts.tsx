@@ -29,7 +29,9 @@ const coordinatorsData = [
 export const Contacts = () => {
   return (
     <StyledContacts>
-      <SectionTitle>CONTACT</SectionTitle>
+      <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
+        CONTACT
+      </SectionTitle>
       <FlexWrapper
         direction={"column"}
         alignItems={"center"}

@@ -166,6 +166,8 @@ const StyledMain = styled.section`
   position: relative;
   z-index: 0;
 
+  padding: 0;
+
   &::after {
     content: "";
     width: 152px;
@@ -186,6 +188,7 @@ const StyledMain = styled.section`
     position: absolute;
     z-index: -3;
     left: 0;
+    bottom: 0;
   }
 `;
 

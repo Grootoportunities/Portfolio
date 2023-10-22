@@ -10,42 +10,42 @@ const skillData = [
   {
     title: "React",
     iconId: "React",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 50 50",
   },
   {
     title: "Redux",
     iconId: "Redux",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 32 35",
   },
   {
     title: "TypeScript",
     iconId: "TypeScript",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 17 15",
   },
   {
     title: "JavaScript",
     iconId: "JavaScript",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 17 15",
   },
   {
-    title: "HTML5",
+    title: "HTML",
     iconId: "HTML5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 25 25",
   },
   {
-    title: "CSS3",
+    title: "CSS",
     iconId: "CSS3",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 25 25",
   },
   {
     title: "Git",
     iconId: "Git",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 22 25",
   },
   {
     title: "Styled Components",
     iconId: "StyledComponents",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus eros in faucibus feugiat.",
+    viewBox: "0 0 41 41",
   },
 ];
 
@@ -56,10 +56,19 @@ export const Skills = () => {
         <SectionTitle sectionColor={"primary"} pseudoColor={"primary"}>
           MY SKILLS
         </SectionTitle>
-        <FlexWrapper wrap={"wrap"} justifyContent={"space-around"}>
+        <FlexWrapper
+          wrap={"wrap"}
+          justifyContent={"space-around"}
+          alignItems={"center"}
+          gap={"20px;"}
+        >
           {skillData.map((item) => {
             return (
-              <Skill title={item.title} iconId={item.iconId} text={item.text} />
+              <Skill
+                title={item.title}
+                iconId={item.iconId}
+                viewBox={item.viewBox}
+              />
             );
           })}
         </FlexWrapper>

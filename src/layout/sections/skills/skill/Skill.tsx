@@ -7,30 +7,53 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 type SkillPropsType = {
   iconId: string;
   title: string;
-  text: string;
+  viewBox?: string;
 };
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      <FlexWrapper direction={"column"} alignItems={"center"}>
+      <FlexWrapper
+        direction={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        gap={"10px"}
+      >
+        <Icon iconId={props.iconId} viewBox={props.viewBox} />
         <SkillTitle>{props.title}</SkillTitle>
-        <Icon iconId={props.iconId} />
-        <SkillText>{props.text}</SkillText>
       </FlexWrapper>
     </StyledSkill>
   );
 };
 
-export const SkillTitle = styled.h3``;
-
-export const SkillText = styled.p`
+export const SkillTitle = styled.h3`
   text-align: center;
+  color: ${Theme.colors.secondary};
+  font-family: Kalameh, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
 `;
 
 export const StyledSkill = styled.article`
-  margin: 58px 12px;
-  width: 330px;
-  padding: 62px 20px 40px;
-  background-color: ${Theme.colors.skill};
+  margin: 60px 120px;
+  width: 120px;
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 10px solid white;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;

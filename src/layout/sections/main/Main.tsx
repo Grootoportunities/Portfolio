@@ -9,6 +9,7 @@ import { Theme } from "../../../styles/Theme";
 import github from "../../../assets/images/github-desktop-2021-05-20.webp";
 import vscode from "../../../assets/images/Visual_Studio_Code_1.35_icon.svg.webp";
 import webstorm from "../../../assets/images/WebStorm_Icon.svg.webp";
+import { Link } from "../../../components/Link/Link";
 
 const appData = [
   {
@@ -61,7 +62,7 @@ export const Main = () => {
               </Description>
               <RegisterButtons>
                 <Button>See Projects</Button>
-                <Button>Download Resume</Button>
+                <Link>Download Resume</Link>
               </RegisterButtons>
             </FlexWrapper>
           </About>
@@ -99,7 +100,7 @@ const Apps = styled.div`
     position: absolute;
     z-index: -5; //todo: Почему не заходит за артикль?
 
-    bottom: 590px;
+    bottom: 576px;
     left: -50px;
     transform: rotate(-45deg);
     text-align: center;
@@ -152,9 +153,6 @@ const MainTitle = styled.h1`
 `;
 
 const Description = styled.p`
-  color: ${Theme.colors.font.pramiary.light};
-  font-size: 20px;
-  font-weight: 400;
   max-width: 376px;
   width: 100%;
 `;

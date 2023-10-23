@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
   a {
@@ -32,10 +32,17 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    cursor: pointer;
   }
 
   section {
     padding: 78px 0; //todo: Узнать почему main наклыдвается на projects
+  }
+  
+  p {
+    color: ${Theme.colors.font.pramiary.light};
+    font-size: 20px;
+    font-weight: 400;
   }
   
   // section:nth-of-type(odd) {

@@ -32,7 +32,7 @@ const CoordinatorTitle = styled.h4`
   margin: 0;
 `;
 
-const CoordinatorText = styled.p`
+const CoordinatorText = styled.span`
   margin: 0;
 `;
 

@@ -59,7 +59,7 @@ export const Skills = () => {
         <FlexWrapper
           wrap={"wrap"}
           justifyContent={"space-between"}
-          // alignItems={"center"}
+          alignItems={"center"}
           gap={"100px;"}
         >
           {skillData.map((item) => {

@@ -7,6 +7,8 @@ import socialIMG from "./../../../assets/images/social-networking-184313840_3849
 import todolist from "./../../../assets/images/hand-drawn-essay-illustration_23-2150292643-_1_.webp";
 import counter from "./../../../assets/images/smart-home-app_23-2148620419-_1_.webp";
 import memorizingGame from "./../../../assets/images/animal-memory-card-game_1308-113025-_1_.webp";
+import { Container } from "../../../components/Container";
+import { Theme } from "../../../styles/Theme";
 
 const projectData = [
   {
@@ -38,29 +40,31 @@ const projectData = [
 export const Projects = () => {
   return (
     <StyledProjects>
-      <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
-        MY PROJECTS
-      </SectionTitle>
-      <FlexWrapper
-        justifyContent={"space-evenly"}
-        alignItems={"center"}
-        wrap={"wrap"}
-      >
-        {projectData.map((item) => {
-          return (
-            <Project
-              title={item.title}
-              description={item.description}
-              imgSrc={item.imgSrc}
-            />
-          );
-        })}
-      </FlexWrapper>
+      <Container>
+        <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
+          MY PROJECTS
+        </SectionTitle>
+        <FlexWrapper
+          justifyContent={"space-between"}
+          alignItems={"flex-start"}
+          gap={"38px"}
+          wrap={"wrap"}
+        >
+          {projectData.map((item) => {
+            return (
+              <Project
+                title={item.title}
+                description={item.description}
+                imgSrc={item.imgSrc}
+              />
+            );
+          })}
+        </FlexWrapper>
+      </Container>
     </StyledProjects>
   );
 };
 
 const StyledProjects = styled.section`
-  min-height: 100vh;
-  background-color: #fff;
+  background-color: ${Theme.colors.secondary};
 `;

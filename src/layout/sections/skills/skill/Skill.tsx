@@ -48,6 +48,7 @@ export const StyledSkill = styled.article`
     height: 160px;
     background-color: #bccbf6;
     border-radius: 50px;
+    box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
 
     position: absolute;
     z-index: -1;
@@ -63,6 +64,7 @@ export const StyledSkill = styled.article`
     height: 160px;
     background-color: ${Theme.colors.secondary};
     border-radius: 50px;
+    box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
 
     position: absolute;
     z-index: -2;
@@ -72,6 +74,10 @@ export const StyledSkill = styled.article`
   }
 
   &:hover {
+    ${SkillTitle} {
+      color: ${Theme.colors.accent};
+    }
+
     &::before {
       transform: scale(0);
     }

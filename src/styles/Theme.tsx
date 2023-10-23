@@ -9,6 +9,8 @@ export const Theme = {
     buttonActive: "rgba(33,87,242,0.9)",
     shadow: "rgba(0, 0, 0, 0.15)",
     skill: "#F9F9FC",
+    field: "#F5F5F5",
+    placeholderColor: "#A5A5A5",
 
     gradient: {
       first: "#FFFFFF80",
@@ -23,7 +25,7 @@ export const Theme = {
 
       secondary: {
         lighter: "#FFFFFF",
-        light: "#A5A5A5",
+
         dark: "#8B8B8B",
         darker: "#000000",
       },

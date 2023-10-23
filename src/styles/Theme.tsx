@@ -11,6 +11,7 @@ export const Theme = {
     skill: "#F9F9FC",
     field: "#F5F5F5",
     placeholderColor: "#A5A5A5",
+    socialIcons: "#688DF5",
 
     gradient: {
       first: "#FFFFFF80",

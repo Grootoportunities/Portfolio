@@ -1,26 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import logoImage from "../../assets/images/Logo__3_-removebg-preview-_1_.webp";
+import logoImage from "../../assets/images/Logo__2_-removebg-preview-_1_.webp";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <FlexWrapper direction={"column"} alignItems={"center"}>
-        {/*<Icon iconId={"FooterLogo"} /> todo: SVG не работает */}
+      <FlexWrapper direction={"column"} alignItems={"center"} gap={"7px"}>
         <FooterImage />
-        <Copyright>©2023 Daniil Lameika. All Rights Reserved.</Copyright>
+        <Copyright>All Rights Reserved 2023©</Copyright>
       </FlexWrapper>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled.footer`
-  max-height: 150px;
-  background-color: #a6bcfa; //#00a3ff;
+  background-color: ${Theme.colors.primary};
+  padding: 40px 0;
 `;
 
-const Copyright = styled.small``;
+const Copyright = styled.small`
+  color: ${Theme.colors.secondary};
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+`;
 
 const FooterImage = styled.img.attrs({
   src: logoImage,

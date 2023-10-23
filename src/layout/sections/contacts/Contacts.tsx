@@ -19,7 +19,7 @@ const coordinatorsData = [
   {
     iconId: "telephone",
     title: "Phone",
-    text: "Email",
+    text: "+375 (29) 829-87-12",
   },
   {
     iconId: "email",
@@ -86,14 +86,12 @@ const Contact = styled.article`
 `;
 
 const StyledForm = styled.form`
-  //border: 1px solid green; //todo: to delete when fix
-
-  max-width: 429px;
+  max-width: 430px;
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; //todo: Почему не работает?
+  align-items: flex-start;
   gap: 23px;
 
   textarea {
@@ -103,24 +101,20 @@ const StyledForm = styled.form`
 `;
 
 const Coordinators = styled.div`
-  //border: 1px solid yellow; //todo: to delete when fix
-
-  max-width: 182px;
-  width: 100%;
-
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  //text-align: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const FormTitle = styled.h3`
-  margin: 0;
+  color: ${Theme.colors.font.secondary.darker};
+  font-size: 36px;
+  font-weight: 500;
 `;
 
 const FieldArea = styled.div`
   display: flex;
-  gap: 7px;
+  justify-content: space-between;
+  gap: 15px;
 `;
 
 const Field = styled.input`

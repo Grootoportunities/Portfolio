@@ -81,7 +81,7 @@ const MeImg = styled.img.attrs(() => ({
   alt: "Me",
 }))`
   height: 600px;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.2);
 `;
 

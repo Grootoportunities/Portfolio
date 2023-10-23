@@ -3,7 +3,7 @@ import { Theme } from "../styles/Theme";
 
 export const Button = styled.button`
   border-radius: 20px;
-  background: ${Theme.colors.accent};
+  background-color: ${Theme.colors.accent};
   color: ${Theme.colors.secondary};
   font-size: 16px;
   font-weight: 600;
@@ -12,7 +12,7 @@ export const Button = styled.button`
 
   &:hover,
   &:active {
-    background: ${Theme.colors.pseudo};
+    background: ${Theme.colors.buttonActive};
   }
 
   &:active {

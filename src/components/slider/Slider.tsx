@@ -37,7 +37,10 @@ const Slide = styled.div`
 
 const BackImage = styled.img``;
 
-const Text = styled.p``;
+const Text = styled.p`
+  display: inline-block;
+  margin: 30px;
+`;
 
 const Pagination = styled.div`
   span {

@@ -55,7 +55,7 @@ export const Main = () => {
               gap={"30px"}
             >
               <Name>I'm</Name>
-              <MainTitle>A Web Developer</MainTitle>
+              <MainTitle>Front-End Developer</MainTitle>
               <Description>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 eu ipsum in justo vestibulum vulputate.
@@ -126,7 +126,7 @@ const About = styled.article`
   backdrop-filter: blur(4px);
   max-width: 1158px;
   width: 100%;
-  padding: 43px 84px 41px 104px;
+  padding: 43px 23px 41px 104px;
   margin-top: 188px;
 `;
 

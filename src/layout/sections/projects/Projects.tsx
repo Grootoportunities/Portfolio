@@ -51,7 +51,7 @@ export const Projects = () => {
         </SectionTitle>
         <FlexWrapper
           justifyContent={"space-between"}
-          alignItems={"flex-start"}
+          // alignItems={"space-between"}
           gap={"38px"}
           wrap={"wrap"}
         >

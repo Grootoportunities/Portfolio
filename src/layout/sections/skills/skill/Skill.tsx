@@ -62,7 +62,7 @@ export const StyledSkill = styled.article`
     display: inline-block;
     width: 160px;
     height: 160px;
-    background-color: ${Theme.colors.secondary};
+    background-image: linear-gradient(145deg, #e7eeff, rgb(33, 87, 242));
     border-radius: 50px;
     box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
 
@@ -75,7 +75,7 @@ export const StyledSkill = styled.article`
 
   &:hover {
     ${SkillTitle} {
-      color: ${Theme.colors.accent};
+      color: ${Theme.colors.secondary};
     }
 
     &::before {

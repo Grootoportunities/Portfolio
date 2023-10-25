@@ -20,21 +20,6 @@ export const Project = (props: ProjectPropsType) => {
 
   return (
     <StyledProject backImg={props.backImg}>
-      {/*<ImageWrapper>*/}
-      {/*  <Image src={props.imgSrc} alt={"Project"} />*/}
-      {/*  <ProjectButtons>*/}
-      {/*    <FlexWrapper*/}
-      {/*      gap={"20px"}*/}
-      {/*      direction={"column"}*/}
-      {/*      justifyContent={"center"}*/}
-      {/*      alignItems={"center"}*/}
-      {/*    >*/}
-      {/*      <Button>VIEW CODE</Button>*/}
-      {/*      <Button>VIEW PROJECT</Button>*/}
-      {/*    </FlexWrapper>*/}
-      {/*  </ProjectButtons>*/}
-      {/*</ImageWrapper>*/}
-
       <ProjectButtons>
         <FlexWrapper
           gap={"20px"}
@@ -56,38 +41,9 @@ export const Project = (props: ProjectPropsType) => {
 
 const ProjectButtons = styled.div`
   margin: 100px 0 30px;
+
   ${Button} {
     padding: 20px 60px;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-
-  &:hover {
-    ${ProjectButtons} {
-      opacity: 1;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
-      border-radius: 26px 26px 0 0;
-    }
-  }
-
-  ${ProjectButtons} {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 `;
 
@@ -96,8 +52,6 @@ const DescriptionWrapper = styled.div`
 `;
 
 const StyledProject = styled.article<StyledProjectPropsType>`
-  //padding: 10px;
-  //background-color: ${Theme.colors.skill};
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
     url(${(props) => props.backImg});
   background-repeat: no-repeat;
@@ -141,14 +95,6 @@ const StyledProject = styled.article<StyledProjectPropsType>`
   ${ProjectButtons} {
     opacity: 0;
   }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  //background-size: cover;
-  border-radius: 26px 26px 0 0;
 `;
 
 const Title = styled.h3`

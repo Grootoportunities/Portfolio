@@ -28,10 +28,9 @@ export const App = (props: AppPropsType) => {
 };
 
 const AppImg = styled.img`
-  height: 75px;
-  width: 75px;
-  border-radius: 55px;
-  border: 10px solid ${Theme.colors.secondary};
+  height: 55px; //75px;
+  width: 55px; //75px;
+  border-radius: 50%;
   background-color: ${Theme.colors.secondary};
 `;
 
@@ -64,8 +63,21 @@ const StyledApp = styled.article`
     border-radius: 24px;
     background-color: ${Theme.colors.primary};
     box-shadow: 0 4px 6px 0 ${Theme.colors.shadow};
-    z-index: -1;
+    z-index: -2;
     bottom: 0;
     position: absolute;
+  }
+
+  &::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: ${Theme.colors.secondary};
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;

@@ -85,11 +85,10 @@ export const StyledSkill = styled.article`
     &::after {
       transform: translate(-50%, -50%) scale(1);
 
-      width: 200px;
-      height: 200px;
+      width: 175px;
+      height: 175px;
 
       ${SkillTitle} {
-        //color: ${Theme.colors.accent}; todo: Не работает на текст
         font-size: 30px;
       }
     }

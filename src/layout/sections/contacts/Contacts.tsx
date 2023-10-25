@@ -14,12 +14,13 @@ const coordinatorsData = [
   {
     iconId: "location",
     title: "Location",
-    text: "Minsk",
+    text: "Minsk, Belarus",
   },
   {
     iconId: "telephone",
     title: "Phone",
-    text: "+375 (29) 829-87-12",
+    text: "+375 (29) 829-87-12 (МТС)",
+    extraText: "+375 (44) 465-89-52 (А1)",
   },
   {
     iconId: "email",
@@ -58,6 +59,7 @@ export const Contacts = () => {
                     iconId={item.iconId}
                     title={item.title}
                     text={item.text}
+                    extraText={item.extraText}
                   />
                 );
               })}

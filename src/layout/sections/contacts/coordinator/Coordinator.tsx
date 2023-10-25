@@ -7,6 +7,7 @@ type CoordinatorPropsType = {
   iconId: string;
   title: string;
   text: string;
+  extraText?: string;
 };
 
 export const Coordinator = (props: CoordinatorPropsType) => {
@@ -16,6 +17,7 @@ export const Coordinator = (props: CoordinatorPropsType) => {
       <Info>
         <CoordinatorTitle>{props.title}</CoordinatorTitle>
         <CoordinatorText>{props.text}</CoordinatorText>
+        <CoordinatorText>{props.extraText}</CoordinatorText>
       </Info>
     </StyledCoordinator>
   );

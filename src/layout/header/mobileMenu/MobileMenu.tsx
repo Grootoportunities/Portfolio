@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
 
@@ -8,6 +9,7 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
       <BurgerButton isOpen={true}>
         <span></span>
       </BurgerButton>
+
       <MobileMenuPopUp isOpen={true}>
         <ul>
           {props.menuItems.map((item, index) => {
@@ -33,12 +35,12 @@ const StyledMobileMenu = styled.nav`
 
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 99999;
+  background-color: rgba(255, 255, 255, 0.9);
   display: none;
 
   ${(props) =>
@@ -52,8 +54,8 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     display: flex;
     justify-content: center;
     gap: 58px;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -63,15 +65,13 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   right: -100px;
   width: 200px;
   height: 200px;
-
-  z-index: 9999999;
+  z-index: 999999999999;
 
   span {
     display: block;
     width: 36px;
     height: 2px;
     background-color: ${Theme.colors.font.pramiary.light};
-
     position: absolute;
     left: 40px;
     bottom: 50px;
@@ -87,7 +87,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       width: 36px;
       height: 2px;
       background-color: ${Theme.colors.font.pramiary.light};
-
       position: absolute;
       transform: translateY(-10px);
 
@@ -104,7 +103,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       width: 24px;
       height: 2px;
       background-color: ${Theme.colors.font.pramiary.light};
-
       position: absolute;
       transform: translateY(10px);
 

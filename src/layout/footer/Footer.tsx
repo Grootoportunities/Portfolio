@@ -18,6 +18,21 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${Theme.colors.primary};
   padding: 40px 0;
+
+  //position: relative;
+  //z-index: 0;
+
+  //&::before {
+  //  content: url(/assets/svg/wave.svg);
+  //  display: inline-block;
+  //
+  //  position: absolute;
+  //  left: 0;
+  //  right: 0;
+  //  top: -100px;
+  //  width: 100%;
+  //  z-index: -1;
+  //}
 `;
 
 const Copyright = styled.small`

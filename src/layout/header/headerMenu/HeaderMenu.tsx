@@ -24,6 +24,10 @@ const StyledHeaderMenu = styled.nav`
     justify-content: center;
     gap: 58px;
   }
+
+  @media ${Theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const Link = styled.a`

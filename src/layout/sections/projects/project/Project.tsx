@@ -58,13 +58,29 @@ const StyledProject = styled.article<StyledProjectPropsType>`
   background-size: cover;
   background-position: center;
   max-width: 540px;
-  width: 100%;
+  width: 100%; //330px не получается :c
+  flex-grow: 1;
   border-radius: 26px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
   height: 100%;
   z-index: 0;
 
   position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 26px;
+    z-index: -1;
+    opacity: 0;
+  }
 
   &:hover {
     //max-width: 550px;
@@ -78,22 +94,30 @@ const StyledProject = styled.article<StyledProjectPropsType>`
       url(${(props) => props.backImg});
 
     &::before {
-      content: "";
-      display: inline-block;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
-      border-radius: 26px;
-      z-index: -1;
+      opacity: 1;
     }
   }
 
   ${ProjectButtons} {
     opacity: 0;
+  }
+
+  ${Theme.media.desktop} {
+    //max-width: 540px; todo: Не получается для десктопов :c
+  }
+
+  ${Theme.media.tablet} {
+    //todo: Какого хуя не работаешь??????
+    ${ProjectButtons} {
+      opacity: 1;
+    }
+
+    background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
+      url(${(props) => props.backImg});
+
+    &::before {
+      opacity: 1;
+    }
   }
 `;
 

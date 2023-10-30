@@ -3,6 +3,7 @@ import { Icon } from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import { Theme } from "../../../../styles/Theme";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { font } from "../../../../styles/Common";
 
 type SkillPropsType = {
   iconId: string;
@@ -28,10 +29,13 @@ export const Skill = (props: SkillPropsType) => {
 
 export const SkillTitle = styled.h3`
   text-align: center;
-  color: ${Theme.colors.font.pramiary.dark};
-  font-family: Kalameh, sans-serif;
   font-size: 20px;
-  font-weight: 700;
+
+  ${font({
+    color: Theme.colors.font.pramiary.dark,
+    family: "Kalameh, sans-serif",
+    weight: 700,
+  })}
 `;
 
 export const StyledSkill = styled.article`
@@ -56,6 +60,11 @@ export const StyledSkill = styled.article`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @media ${Theme.media.tablet} {
+      width: 130px;
+      height: 130px;
+    }
   }
 
   &::after {
@@ -72,6 +81,11 @@ export const StyledSkill = styled.article`
     left: 50%;
     top: 50%;
     transform: scale(0);
+
+    @media ${Theme.media.tablet} {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   &:hover {
@@ -93,5 +107,9 @@ export const StyledSkill = styled.article`
         font-size: 30px;
       }
     }
+  }
+
+  @media ${Theme.media.tablet} {
+    width: 60px;
   }
 `;

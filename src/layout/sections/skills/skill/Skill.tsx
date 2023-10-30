@@ -36,7 +36,8 @@ export const SkillTitle = styled.h3`
 
 export const StyledSkill = styled.article`
   margin: 20px;
-  width: 120px;
+  width: 90px;
+  flex-grow: 1;
 
   position: relative;
   z-index: 0;

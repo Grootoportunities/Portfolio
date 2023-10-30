@@ -36,7 +36,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   section {
-    padding: 78px 0; //todo: Узнать почему main наклыдвается на projects
+    padding: 65px 0;
+    
+    @media ${Theme.media.tablet} {
+      padding: 60px 0;
+    }
   }
   
   p {

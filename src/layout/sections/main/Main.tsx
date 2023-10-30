@@ -101,7 +101,7 @@ const Apps = styled.div`
 
 const About = styled.article`
   display: flex;
-  justify-content: space-evenly;
+  //justify-content: space-between;
   align-items: center;
   gap: 76px;
   flex-wrap: wrap;
@@ -141,12 +141,13 @@ const About = styled.article`
     gap: 0;
     max-width: 590px;
     padding: 29px 51px 86px 76px;
+    justify-content: center;
   }
 `;
 
 const RegisterButtons = styled.div`
   display: flex;
-  gap: 90px;
+  gap: 32px;
 `;
 
 const Name = styled.h2`

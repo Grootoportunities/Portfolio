@@ -74,6 +74,10 @@ const Information = styled.article`
   border: 2px solid #bfcbf6;
   backdrop-filter: blur(4px);
   padding: 75px 30px 65px 60px;
+
+  @media ${Theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const MeImg = styled.img.attrs(() => ({

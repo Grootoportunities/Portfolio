@@ -47,7 +47,6 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 99999;
-  //padding: 20px 0;
 
   @media ${Theme.media.tablet} {
     backdrop-filter: none;

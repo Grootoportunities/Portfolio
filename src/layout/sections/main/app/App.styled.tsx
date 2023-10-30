@@ -1,71 +1,80 @@
 import React from "react";
 import styled from "styled-components";
-import { Icon } from "../../../../components/icon/Icon";
 import { Theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 type AppPropsType = {
-  // iconId: string;
   title: string;
   imgSrc: string;
-  // width?: string;
-  // height?: string;
-  // viewBox?: string;
 };
 
 export const App = (props: AppPropsType) => {
   return (
     <StyledApp>
       <AppImg src={props.imgSrc} />
-      {/*<Icon*/}
-      {/*  iconId={props.iconId}*/}
-      {/*  width={props.width}*/}
-      {/*  height={props.height}*/}
-      {/*  viewBox={props.viewBox}*/}
-      {/*/>*/}
       <Title>{props.title}</Title>
     </StyledApp>
   );
 };
 
 const AppImg = styled.img`
-  height: 55px; //75px;
-  width: 55px; //75px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
   background-color: ${Theme.colors.secondary};
+
+  @media ${Theme.media.tablet} {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Title = styled.h3`
-  color: ${Theme.colors.font.secondary.lighter};
   font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
   text-align: center;
+
+  ${font({
+    color: Theme.colors.font.secondary.lighter,
+    weight: 600,
+  })}
+
+  @media ${Theme.media.tablet} {
+    font-size: 34px;
+  }
 `;
 
 const StyledApp = styled.article`
   min-width: 160px;
   width: 100%;
   min-height: 124px;
+  height: 100%;
   padding-bottom: 21px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   position: relative;
   z-index: 0;
 
   &::before {
     content: "";
-    width: 161px;
-    height: 91px;
+    width: 160px;
+    height: 90px;
     border-radius: 24px;
     background-color: ${Theme.colors.primary};
     box-shadow: 0 4px 6px 0 ${Theme.colors.shadow};
     z-index: -2;
     bottom: 0;
     position: absolute;
+
+    @media ${Theme.media.tablet} {
+      width: 270px;
+      height: 155px;
+    }
   }
 
   &::after {
@@ -79,5 +88,18 @@ const StyledApp = styled.article`
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media ${Theme.media.tablet} {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  @media ${Theme.media.tablet} {
+    min-width: 270px;
+    width: 100%;
+    min-height: 155px;
+    height: 100%;
+    padding-bottom: 35px;
   }
 `;

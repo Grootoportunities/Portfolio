@@ -83,6 +83,10 @@ const MeImg = styled.img.attrs(() => ({
   height: 600px;
   border-radius: 15px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.2);
+
+  @media ${Theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const Name = styled.h3`

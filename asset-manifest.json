@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/Portfolio/static/js/main.a8ef0b32.js",
+    "main.js": "/Portfolio/static/js/main.c487be4c.js",
     "static/js/787.25eaef86.chunk.js": "/Portfolio/static/js/787.25eaef86.chunk.js",
     "static/media/icons-sprite.svg": "/Portfolio/static/media/icons-sprite.e5f4e1def813a9c40d19080f859ed6b2.svg",
     "static/media/social-networking-184313840_384936-_1_.webp": "/Portfolio/static/media/social-networking-184313840_384936-_1_.d61fd13e9beb90b2d4e9.webp",
@@ -15,11 +15,11 @@
     "static/media/hand-drawn-essay-illustration_23-2150292643-_1_.webp": "/Portfolio/static/media/hand-drawn-essay-illustration_23-2150292643-_1_.58a4d6edb4eea2f0db11.webp",
     "static/media/Logo__2_-removebg-preview-_1_.webp": "/Portfolio/static/media/Logo__2_-removebg-preview-_1_.50bb0c00ee10ca9afbd8.webp",
     "index.html": "/Portfolio/index.html",
-    "main.a8ef0b32.js.map": "/Portfolio/static/js/main.a8ef0b32.js.map",
+    "main.c487be4c.js.map": "/Portfolio/static/js/main.c487be4c.js.map",
     "787.25eaef86.chunk.js.map": "/Portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.a8ef0b32.js"
+    "static/js/main.c487be4c.js"
   ]
 }

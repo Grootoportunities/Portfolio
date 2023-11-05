@@ -204,7 +204,7 @@ const StyledMain = styled.section`
   &::before {
     content: "";
     height: 100%;
-    width: 468px;
+    width: 31%;
     background-color: ${Theme.colors.primary};
     position: absolute;
     z-index: -3;

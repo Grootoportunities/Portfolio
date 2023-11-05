@@ -8,18 +8,17 @@ type ProjectPropsType = {
   imgSrc: string;
   title: string;
   description: string;
-  backImg: string;
 };
 
 type StyledProjectPropsType = {
-  backImg: string;
+  imgSrc: string;
 };
 
 export const Project = (props: ProjectPropsType) => {
   // const { imgSrc, title, description, backImg } = props; todo: Деструктуризация!
 
   return (
-    <StyledProject backImg={props.backImg}>
+    <StyledProject imgSrc={props.imgSrc}>
       <ProjectButtons>
         <FlexWrapper
           gap={"20px"}
@@ -53,7 +52,7 @@ const DescriptionWrapper = styled.div`
 
 const StyledProject = styled.article<StyledProjectPropsType>`
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
-    url(${(props) => props.backImg});
+    url(${(props) => props.imgSrc});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -91,7 +90,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
     }
 
     background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
-      url(${(props) => props.backImg});
+      url(${(props) => props.imgSrc});
 
     &::before {
       opacity: 1;
@@ -113,7 +112,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
     }
 
     background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
-      url(${(props) => props.backImg});
+      url(${(props) => props.imgSrc});
 
     &::before {
       opacity: 1;

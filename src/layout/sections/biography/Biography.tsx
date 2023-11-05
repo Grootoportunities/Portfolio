@@ -1,15 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 import me from "../../../assets/images/photo_2023-10-23_15-19-26cut.jpg";
-import { TabMenu } from "./tabMenu/TabMenu";
+import { TabMenu, TabsStatusType } from "./tabMenu/TabMenu";
 
-const tabItems = ["Main Skills", "Skills", "Experience", "Education"];
+const tabItems: Array<{
+  title: string;
+  status: TabsStatusType;
+}> = [
+  { title: "Main Skills", status: "main" },
+  { title: "Skills", status: "skills" },
+  { title: "Experience", status: "experience" },
+  { title: "Education", status: "education" },
+];
+
+const biographyItems = [
+  {
+    title: "Front-end developer",
+    pastTitle: "Development",
+    description: "React / Redux / Type Script",
+    type: "main",
+  },
+  {
+    title: "User experience development",
+    pastTitle: "Development",
+    description: "Delight the user and make it work.",
+    type: "main",
+  },
+  {
+    title: "Interaction design ",
+    pastTitle: "Development",
+    description: "Use of different UI libraries",
+    type: "main",
+  },
+  {
+    title: "Front-end developer",
+    pastTitle: "Learning app “Memorization Cards",
+    description: "02/2022 - present",
+    type: "experience",
+  },
+  {
+    title: "Front-end developer",
+    pastTitle: "Social project “Ta Na”",
+    description: "08/2021 - 02/2022",
+    type: "experience",
+  },
+  {
+    title: "Front-End Developer",
+    pastTitle: "IT-Incubator",
+    description: "2023 - present",
+    type: "education",
+  },
+  {
+    title: "Software Engineer",
+    pastTitle: "Belarusian National Technical University",
+    description: "2019-2023",
+    type: "education",
+  },
+];
+
+const skillsItems = [
+  "Creation Web apps using ReactJs with TypeScript and various libraries",
+  "Using Redux and Redux-toolkit to manage application state",
+  "Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries",
+  "Implementation of multilingual application using localization management platform",
+  "Сheck the correctness of the code with Unit Tests and take Storybook for demonstration of individual modules of the application",
+  "Creation of applications with login and registration forms, as well as functionality with the ability to add, delete, change and filter data.",
+];
 
 export const Biography = () => {
+  const [currentFilterStatus, setcurrentFilterStatus] = useState("main");
+  /* let filteredInformation = biographyItems.filter(
+    (info) => info.type === "main",
+  );
+
+  if (currentFilterStatus === "experience") {
+    filteredInformation = biographyItems.filter(
+      (info) => info.type === "experience",
+    );
+  }
+
+  if (currentFilterStatus === "education") {
+    filteredInformation = biographyItems.filter(
+      (info) => info.type === "education",
+    );
+  }*/
+  // break-word
+  const renderText = (filterType: string) => {
+    if (currentFilterStatus === "skills") {
+      return skillsItems.map((item) => <SkillsInfo>{item}</SkillsInfo>);
+    } else {
+      return biographyItems
+        .filter((info) => info.type === filterType)
+        .map((item) => {
+          return (
+            <BiographyInfo>
+              <span>{item.title}</span> - {item.pastTitle}
+              <p>{item.description}</p>
+            </BiographyInfo>
+          );
+        });
+    }
+  };
+
+  function changeFilterStatus(value: TabsStatusType) {
+    setcurrentFilterStatus(value);
+  }
+
   return (
     <StyledBiography>
       <Container>
@@ -27,15 +127,20 @@ export const Biography = () => {
                 Redux, HTML & CSS. Now I am improving my skills in this
                 direction and expanding them with new technologies.
               </CommonInformation>
-              <TabMenu tabItems={tabItems} />
-              <EducationInfo>
-                <span>Front-End Developer</span> - IT-Incubator{" "}
-                <div>2023 - present</div>
-              </EducationInfo>
-              <EducationInfo>
-                <span>Software Engineer</span> - Belarusian National Technical
-                University <div>2019-2023</div>
-              </EducationInfo>
+              <TabMenu
+                tabItems={tabItems}
+                changeFilterStatus={changeFilterStatus}
+                currentFilterStatus={currentFilterStatus}
+              />
+              {renderText(currentFilterStatus)}
+              {/*{filteredInformation.map((item) => {
+                return (
+                  <BiographyInfo>
+                    <span>{item.title}</span> - {item.pastTitle}
+                    <p>{item.description}</p>
+                  </BiographyInfo>
+                );
+              })}*/}
             </FlexWrapper>
           </Information>
           <MeImg />
@@ -125,8 +230,12 @@ const CommonInformation = styled.p`
   width: 100%;
 `;
 
-const EducationInfo = styled(CommonInformation)`
+const BiographyInfo = styled(CommonInformation)`
   span {
     font-weight: bold;
   }
+`;
+
+const SkillsInfo = styled(CommonInformation)`
+  font-weight: bold;
 `;

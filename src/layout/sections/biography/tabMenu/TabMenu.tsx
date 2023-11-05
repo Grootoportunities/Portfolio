@@ -1,16 +1,37 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "../../../../components/Link/Link";
 import { Theme } from "../../../../styles/Theme";
 
-export const TabMenu = (props: { tabItems: Array<string> }) => {
+export type TabsStatusType = "main" | "skills" | "experience" | "education";
+
+type TabMenuPropsType = {
+  tabItems: Array<{
+    status: TabsStatusType;
+    title: string;
+  }>;
+  changeFilterStatus: (value: TabsStatusType) => void;
+  currentFilterStatus: string;
+};
+
+export const TabMenu = (props: TabMenuPropsType) => {
   return (
     <StyledTabMenu>
       <ul>
         {props.tabItems.map((item, index) => {
           return (
-            <ListItem key={index}>
-              <Link href="">{item}</Link>
+            <ListItem
+              key={index}
+              active={props.currentFilterStatus === item.status}
+            >
+              <Link
+                as={"button"}
+                onClick={() => {
+                  props.changeFilterStatus(item.status);
+                }}
+              >
+                {item.title}
+              </Link>
             </ListItem>
           );
         })}
@@ -29,7 +50,7 @@ const StyledTabMenu = styled.nav`
   margin: 15px 0;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.li<{ active: boolean }>`
   ${Link} {
     font-size: 18px;
   }
@@ -63,4 +84,18 @@ const ListItem = styled.li`
 
     transform: translateY(1px);
   }
+
+  ${(props) =>
+    props.active &&
+    css<{ active: boolean }>`
+      &::before {
+        width: 100%;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    `}
 `;

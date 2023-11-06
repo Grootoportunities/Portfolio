@@ -6,6 +6,7 @@ import { Theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 import me from "../../../assets/images/photo_2023-10-23_15-19-26cut.jpg";
 import { TabMenu, TabsStatusType } from "./tabMenu/TabMenu";
+import Tilt from "react-parallax-tilt";
 
 const tabItems: Array<{
   title: string;
@@ -143,7 +144,15 @@ export const Biography = () => {
               })}*/}
             </FlexWrapper>
           </Information>
-          <MeImg />
+          <Tilt
+            tiltEnable={false}
+            glareEnable={true}
+            glareMaxOpacity={0.8}
+            glareColor="white"
+            glarePosition="bottom"
+          >
+            <MeImg />
+          </Tilt>
         </FlexWrapper>
       </Container>
     </StyledBiography>

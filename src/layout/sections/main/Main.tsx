@@ -11,6 +11,7 @@ import vscode from "../../../assets/images/Visual_Studio_Code_1.35_icon.svg.webp
 import webstorm from "../../../assets/images/WebStorm_Icon.svg.webp";
 import { Link } from "../../../components/Link/Link";
 import { font } from "../../../styles/Common";
+import Typewriter from "typewriter-effect";
 
 const appData = [
   {
@@ -40,7 +41,17 @@ export const Main = () => {
             <Photo />
             <FlexWrapper direction={"column"} justifyContent={"space-evenly"}>
               <Name>I'm</Name>
-              <MainTitle>Front-End Developer</MainTitle>
+              <MainTitle>
+                <p>Front-End Developer</p>
+                <Typewriter
+                  options={{
+                    strings: ["Front-End Developer"],
+                    autoStart: true,
+                    loop: true,
+                    delay: 70,
+                  }}
+                />
+              </MainTitle>
               <Description>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 eu ipsum in justo vestibulum vulputate.
@@ -171,6 +182,10 @@ const MainTitle = styled.h1`
     Fmax: 60,
     Fmin: 34,
   })}
+
+  p {
+    display: none;
+  }
 `;
 
 const Description = styled.p`

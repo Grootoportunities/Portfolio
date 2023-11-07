@@ -4,14 +4,9 @@ import Typewriter from "typewriter-effect";
 import { Button } from "../Button";
 import { Link } from "../Link/Link";
 import styled from "styled-components";
-import {
-  Description,
-  MainTitle,
-  Name,
-  Photo,
-  RegisterButtons,
-} from "../../layout/sections/main/Main";
 import { Theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
+import photo from "../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
 
 export const About = () => {
   return (
@@ -78,5 +73,59 @@ const StyledAbout = styled.article`
     max-width: 590px;
     padding: 29px 51px 86px 76px;
     justify-content: center;
+  }
+`;
+
+const RegisterButtons = styled.div`
+  display: flex;
+  gap: 32px;
+`;
+
+const Name = styled.h2`
+  ${font({
+    weight: 700,
+    Fmax: 60,
+    Fmin: 34,
+    color: Theme.colors.font.pramiary.light,
+  })}
+
+  span {
+    color: ${Theme.colors.accent};
+  }
+`;
+
+const MainTitle = styled.h1`
+  ${font({
+    color: Theme.colors.font.pramiary.light,
+    weight: 700,
+    Fmax: 60,
+    Fmin: 34,
+  })}
+
+  p {
+    display: none;
+  }
+`;
+
+const Description = styled.p`
+  max-width: 376px;
+  width: 100%;
+
+  ${font({ Fmax: 20, Fmin: 11 })}
+`;
+
+const Photo = styled.img.attrs(() => ({
+  src: photo,
+  alt: "Photo",
+}))`
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 335px;
+  border: 25px solid #fff;
+
+  @media ${Theme.media.tablet} {
+    width: 335px;
+    height: 335px;
   }
 `;

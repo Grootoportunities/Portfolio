@@ -22,73 +22,114 @@ export const Particle = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        // background: {
-        //   color: {
-        //     value: "#0d47a1",
-        //   },
-        // },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            // onClick: {
-            //   enable: true,
-            //   mode: "push",
-            // },
-            onHover: {
+        particles: {
+          number: {
+            value: 96,
+            density: {
               enable: true,
-              mode: "repulse",
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.8636545381847264,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 5,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 191.92323070771698,
+            color: "#ffffff",
+            opacity: 0.2718912435025991,
+            width: 1.91923230707717,
+          },
+          move: {
+            enable: true,
+            speed: 1.5993602558976416,
+            direction: "top-right",
+            random: true,
+            straight: true,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 2479.0083966413445,
+              rotateY: 1999.200319872052,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "bubble",
+            },
+            onclick: {
+              enable: false,
+              mode: "push",
             },
             resize: true,
           },
           modes: {
-            push: {
-              quantity: 4,
+            grab: {
+              distance: 170.0914444003467,
+              line_linked: {
+                opacity: 0.4676923076923077,
+              },
+            },
+            bubble: {
+              distance: 194.39022217182483,
+              size: 16.199185180985403,
+              duration: 2.186889999433029,
+              opacity: 0.080995925904927,
+              speed: 3,
             },
             repulse: {
-              distance: 200,
+              distance: 89.09551849541971,
               duration: 0.4,
             },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
           },
         },
-        particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 6,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
-        },
-        detectRetina: true,
+        retina_detect: true,
       }}
     />
   );

@@ -37,31 +37,33 @@ export const Main = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <About>
-            <Photo />
-            <FlexWrapper direction={"column"} justifyContent={"space-evenly"}>
-              <Name>I'm</Name>
-              <MainTitle>
-                <p>Front-End Developer</p>
-                <Typewriter
-                  options={{
-                    strings: ["Front-End Developer"],
-                    autoStart: true,
-                    loop: true,
-                    delay: 70,
-                  }}
-                />
-              </MainTitle>
-              <Description>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eu ipsum in justo vestibulum vulputate.
-              </Description>
-              <RegisterButtons>
-                <Button>See Projects</Button>
-                <Link>Download Resume</Link>
-              </RegisterButtons>
-            </FlexWrapper>
-          </About>
+          {/*<About>*/}
+          {/*  <Photo />*/}
+          {/*  <FlexWrapper direction={"column"} justifyContent={"space-evenly"}>*/}
+          {/*    <Name>*/}
+          {/*      I'm <span>Daniil Lameika</span>*/}
+          {/*    </Name>*/}
+          {/*    <MainTitle>*/}
+          {/*      <p>Front-End Developer</p>*/}
+          {/*      <Typewriter*/}
+          {/*        options={{*/}
+          {/*          strings: ["Front-End Developer"],*/}
+          {/*          autoStart: true,*/}
+          {/*          loop: true,*/}
+          {/*          delay: 100,*/}
+          {/*        }}*/}
+          {/*      />*/}
+          {/*    </MainTitle>*/}
+          {/*    <Description>*/}
+          {/*      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce*/}
+          {/*      eu ipsum in justo vestibulum vulputate.*/}
+          {/*    </Description>*/}
+          {/*    <RegisterButtons>*/}
+          {/*      <Button>See Projects</Button>*/}
+          {/*      <Link>Download Resume</Link>*/}
+          {/*    </RegisterButtons>*/}
+          {/*  </FlexWrapper>*/}
+          {/*</About>*/}
           <Apps>
             <FlexWrapper gap={"13px"}>
               {appData.map((item) => {
@@ -94,7 +96,7 @@ const Apps = styled.div`
     color: ${Theme.colors.pseudo};
     background-color: transparent;
     position: absolute;
-    z-index: -5; //todo: Почему не заходит за артикль?
+    z-index: -4; //todo: Почему не заходит за артикль?
 
     bottom: 576px;
     left: -50px;
@@ -112,10 +114,11 @@ const Apps = styled.div`
 
 const About = styled.article`
   display: flex;
-  //justify-content: space-between;
   align-items: center;
   gap: 76px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 
   background-image: linear-gradient(
     147deg,
@@ -131,23 +134,6 @@ const About = styled.article`
   padding: 43px 11px 41px 104px;
   margin-top: 188px;
 
-  &::before {
-    content: "+";
-    display: inline-block;
-    color: ${Theme.colors.pseudo};
-    background-color: transparent;
-    position: absolute;
-    z-index: -5; //todo: Почему не заходит за артикль?
-
-    bottom: 46px;
-    left: 372px;
-    transform: rotate(-45deg);
-    text-align: center;
-    font-size: 150px;
-    font-style: normal;
-    font-weight: 600;
-  }
-
   @media ${Theme.media.tablet} {
     gap: 0;
     max-width: 590px;
@@ -156,12 +142,12 @@ const About = styled.article`
   }
 `;
 
-const RegisterButtons = styled.div`
+export const RegisterButtons = styled.div`
   display: flex;
   gap: 32px;
 `;
 
-const Name = styled.h2`
+export const Name = styled.h2`
   ${font({
     weight: 700,
     Fmax: 60,
@@ -169,13 +155,12 @@ const Name = styled.h2`
     color: Theme.colors.font.pramiary.light,
   })}
 
-  &::after {
-    content: " Daniil Lameika";
+  span {
     color: ${Theme.colors.accent};
   }
 `;
 
-const MainTitle = styled.h1`
+export const MainTitle = styled.h1`
   ${font({
     color: Theme.colors.font.pramiary.light,
     weight: 700,
@@ -188,19 +173,19 @@ const MainTitle = styled.h1`
   }
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   max-width: 376px;
   width: 100%;
 
   ${font({ Fmax: 20, Fmin: 11 })}
 `;
 
-const StyledMain = styled.section`
+export const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
   background-color: #fff;
   position: relative;
-  z-index: 0;
+  z-index: -1;
 
   padding: 0;
 
@@ -209,7 +194,7 @@ const StyledMain = styled.section`
     width: 152px;
     height: 152px;
     position: absolute;
-    z-index: -1; //todo: тоже
+    z-index: -2; //todo: тоже
     border: 20px solid ${Theme.colors.pseudo};
     border-radius: 50%;
     right: 156px;
@@ -232,7 +217,7 @@ const StyledMain = styled.section`
   }
 `;
 
-const Photo = styled.img.attrs(() => ({
+export const Photo = styled.img.attrs(() => ({
   src: photo,
   alt: "Photo",
 }))`

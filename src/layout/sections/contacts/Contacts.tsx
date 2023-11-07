@@ -74,6 +74,7 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
   background-color: ${Theme.colors.secondary};
+  position: relative;
 `;
 
 const Contact = styled.article`

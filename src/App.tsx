@@ -7,11 +7,15 @@ import { Biography } from "./layout/sections/biography/Biography";
 import { Contacts } from "./layout/sections/contacts/Contacts";
 import { Footer } from "./layout/footer/Footer";
 import { MobileApps } from "./layout/sections/main/mobileApps/MobileApps";
+import { Particle } from "./components/particle/Particle";
+import { About } from "./components/about/About";
 
 function App() {
   return (
     <div className="App">
+      <Particle />
       <Header />
+      <About />
       <Main />
       <MobileApps />
       <Projects />

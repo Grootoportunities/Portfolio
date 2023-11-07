@@ -8,7 +8,7 @@ import { Contacts } from "./layout/sections/contacts/Contacts";
 import { Footer } from "./layout/footer/Footer";
 import { MobileApps } from "./layout/sections/main/mobileApps/MobileApps";
 import { Particle } from "./components/particle/Particle";
-import { About } from "./components/about/About";
+import { About } from "./layout/sections/main/about/About";
 
 function App() {
   return (

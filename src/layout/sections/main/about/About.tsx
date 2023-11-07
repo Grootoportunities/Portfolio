@@ -1,12 +1,12 @@
 import React from "react";
-import { FlexWrapper } from "../FlexWrapper";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 import Typewriter from "typewriter-effect";
-import { Button } from "../Button";
-import { Link } from "../Link/Link";
+import { Button } from "../../../../components/Button";
+import { Link } from "../../../../components/Link/Link";
 import styled from "styled-components";
-import { Theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
-import photo from "../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
+import { Theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
+import photo from "../../../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
 
 export const About = () => {
   return (

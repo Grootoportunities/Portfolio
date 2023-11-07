@@ -74,22 +74,7 @@ const skillsItems = [
 
 export const Biography = () => {
   const [currentFilterStatus, setcurrentFilterStatus] = useState("main");
-  /* let filteredInformation = biographyItems.filter(
-    (info) => info.type === "main",
-  );
 
-  if (currentFilterStatus === "experience") {
-    filteredInformation = biographyItems.filter(
-      (info) => info.type === "experience",
-    );
-  }
-
-  if (currentFilterStatus === "education") {
-    filteredInformation = biographyItems.filter(
-      (info) => info.type === "education",
-    );
-  }*/
-  // break-word
   const renderText = (filterType: string) => {
     if (currentFilterStatus === "skills") {
       return skillsItems.map((item) => <SkillsInfo>{item}</SkillsInfo>);
@@ -117,6 +102,7 @@ export const Biography = () => {
         <SectionTitle sectionColor={"secondary"} pseudoColor={"primary"}>
           ABOUT ME
         </SectionTitle>
+
         <FlexWrapper justifyContent={"space-around"} alignItems={"center"}>
           <Information>
             <FlexWrapper direction={"column"} gap={"25px"}>
@@ -134,14 +120,6 @@ export const Biography = () => {
                 currentFilterStatus={currentFilterStatus}
               />
               {renderText(currentFilterStatus)}
-              {/*{filteredInformation.map((item) => {
-                return (
-                  <BiographyInfo>
-                    <span>{item.title}</span> - {item.pastTitle}
-                    <p>{item.description}</p>
-                  </BiographyInfo>
-                );
-              })}*/}
             </FlexWrapper>
           </Information>
           <Tilt
@@ -160,10 +138,7 @@ export const Biography = () => {
 };
 
 const StyledBiography = styled.section`
-  background-color: ${Theme.colors.secondary};
-
   position: relative;
-  z-index: 0;
 
   &::before {
     content: "";
@@ -201,7 +176,6 @@ const MeImg = styled.img.attrs(() => ({
   height: 600px;
   border-radius: 15px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.2);
-
   @media ${Theme.media.tablet} {
     display: none;
   }

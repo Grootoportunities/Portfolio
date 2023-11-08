@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Link } from "../../../../components/Link/Link";
+import { NavLink } from "../../../../components/link/Link";
 import { Theme } from "../../../../styles/Theme";
 
 export type TabsStatusType = "main" | "skills" | "experience" | "education";
@@ -24,14 +24,14 @@ export const TabMenu = (props: TabMenuPropsType) => {
               key={index}
               active={props.currentFilterStatus === item.status}
             >
-              <Link
+              <NavLink
                 as={"button"}
                 onClick={() => {
                   props.changeFilterStatus(item.status);
                 }}
               >
                 {item.title}
-              </Link>
+              </NavLink>
             </ListItem>
           );
         })}
@@ -51,7 +51,7 @@ const StyledTabMenu = styled.nav`
 `;
 
 const ListItem = styled.li<{ active: boolean }>`
-  ${Link} {
+  ${NavLink} {
     font-size: 18px;
   }
 

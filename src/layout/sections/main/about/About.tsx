@@ -2,7 +2,7 @@ import React from "react";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import Typewriter from "typewriter-effect";
 import { Button } from "../../../../components/Button";
-import { Link } from "../../../../components/Link/Link";
+import { NavLink } from "../../../../components/link/Link";
 import styled from "styled-components";
 import { Theme } from "../../../../styles/Theme";
 import { font } from "../../../../styles/Common";
@@ -37,7 +37,7 @@ export const About = () => {
         </Description>
         <RegisterButtons>
           <Button>See Projects</Button>
-          <Link>Download Resume</Link>
+          <NavLink to={"#"}>Download Resume</NavLink>
         </RegisterButtons>
       </FlexWrapper>
     </StyledAbout>

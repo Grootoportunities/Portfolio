@@ -25,7 +25,7 @@ const appData = [
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id={"home"}>
       <Container>
         <FlexWrapper alignItems={"flex-end"} justifyContent={"flex-end"}>
           <Apps>

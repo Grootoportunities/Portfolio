@@ -97,7 +97,7 @@ export const Biography = () => {
   }
 
   return (
-    <StyledBiography>
+    <StyledBiography id={"about"}>
       <Container>
         <SectionTitle sectionColor={"secondary"} pseudoColor={"primary"}>
           ABOUT ME
@@ -128,6 +128,7 @@ export const Biography = () => {
             glareMaxOpacity={0.8}
             glareColor="white"
             glarePosition="bottom"
+            glareBorderRadius={"15px"}
           >
             <MeImg />
           </Tilt>
@@ -153,6 +154,9 @@ const StyledBiography = styled.section`
 `;
 
 const Information = styled.article`
+  min-height: 967px;
+  height: 100%;
+
   background-image: linear-gradient(
     147deg,
     ${Theme.colors.primary},

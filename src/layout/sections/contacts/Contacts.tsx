@@ -31,7 +31,7 @@ const coordinatorsData = [
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={"contacts"}>
       <Container>
         <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
           CONTACT

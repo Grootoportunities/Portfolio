@@ -8,7 +8,13 @@ import { Theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
-const items = ["Home", "Projects", "About", "Content"];
+const items: Array<{ title: string; hrefItem: string }> = [
+  { title: "Home", hrefItem: "home" },
+  { title: "Projects", hrefItem: "projects" },
+  { title: "About", hrefItem: "about" },
+  { title: "Skills", hrefItem: "skills" },
+  { title: "Contacts", hrefItem: "contacts" },
+];
 
 export const Header = () => {
   return (

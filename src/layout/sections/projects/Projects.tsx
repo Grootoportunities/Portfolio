@@ -39,7 +39,7 @@ const projectData = [
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id={"projects"}>
       <Container>
         <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
           MY PROJECTS

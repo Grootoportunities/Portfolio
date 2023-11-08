@@ -2,8 +2,16 @@ import React, { useState } from "react";
 
 import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
+import { NavLink } from "../../../components/link/Link";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+type MobileMenuPropsType = {
+  menuItems: Array<{
+    title: string;
+    hrefItem: string;
+  }>;
+};
+
+export const MobileMenu = (props: MobileMenuPropsType) => {
   const [menuIsOpen, setmenuIsOpen] = useState(false);
   const onBurgerBtnClick = () => {
     setmenuIsOpen(!menuIsOpen);
@@ -23,7 +31,9 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
           {props.menuItems.map((item, index) => {
             return (
               <ListItem key={index}>
-                <Link href="">{item}</Link>
+                <NavLink activeClass={"active"} smooth to={item.hrefItem} spy>
+                  {item.title}
+                </NavLink>
               </ListItem>
             );
           })}
@@ -124,13 +134,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-const Link = styled.a`
-  color: ${Theme.colors.font.pramiary.light};
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-`;
-
 const ListItem = styled.li`
   position: relative;
 
@@ -175,5 +178,54 @@ const ListItem = styled.li`
     z-index: 1;
 
     transform: scale(0);
+  }
+
+  ${NavLink} {
+    color: ${Theme.colors.font.pramiary.light};
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      background-color: ${Theme.colors.font.pramiary.light};
+
+      position: absolute;
+      top: 130%;
+      right: -10px;
+      left: -10px;
+      z-index: 1;
+
+      transform: scale(0);
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 3px;
+      background-color: ${Theme.colors.font.pramiary.light};
+
+      position: absolute;
+      bottom: 130%;
+      right: -10px;
+      left: -10px;
+      z-index: 1;
+
+      transform: scale(0);
+    }
+
+    &:hover {
+      letter-spacing: 5px;
+
+      &::before,
+      &::after {
+        transform: scale(1);
+      }
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 `;

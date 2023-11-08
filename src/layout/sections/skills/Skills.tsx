@@ -51,7 +51,7 @@ const skillData = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id={"skills"}>
       <Container>
         <SectionTitle sectionColor={"primary"} pseudoColor={"primary"}>
           MY SKILLS

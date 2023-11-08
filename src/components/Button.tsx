@@ -9,6 +9,7 @@ export const Button = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   padding: 15px 40px;
+  transition: ${Theme.animations.transitions.regular};
 
   &:hover,
   &:active {

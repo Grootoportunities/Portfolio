@@ -79,6 +79,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
     border-radius: 26px;
     z-index: -1;
     opacity: 0;
+    transition: ${Theme.animations.transitions.regular};
   }
 
   &:hover {
@@ -87,6 +88,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
 
     ${ProjectButtons} {
       opacity: 1;
+      transition: ${Theme.animations.transitions.regular};
     }
 
     background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
@@ -99,6 +101,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
 
   ${ProjectButtons} {
     opacity: 0;
+    transition: ${Theme.animations.transitions.regular};
   }
 
   ${Theme.media.desktop} {

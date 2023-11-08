@@ -55,6 +55,7 @@ const ListItem = styled.li`
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    transition: ${Theme.animations.transitions.regular};
 
     &::before {
       content: "";
@@ -69,6 +70,7 @@ const ListItem = styled.li`
       z-index: 1;
 
       transform: scale(0);
+      transition: ${Theme.animations.transitions.regular};
     }
 
     &::after {
@@ -84,6 +86,7 @@ const ListItem = styled.li`
       z-index: 1;
 
       transform: scale(0);
+      transition: ${Theme.animations.transitions.regular};
     }
 
     &:hover,

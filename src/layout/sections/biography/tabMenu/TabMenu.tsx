@@ -69,6 +69,7 @@ const ListItem = styled.li<{ active: boolean }>`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    transition: ${Theme.animations.transitions.regular};
   }
 
   &:hover {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { FlexWrapper } from "../../components/FlexWrapper";
@@ -17,32 +17,74 @@ const items: Array<{ title: string; hrefItem: string }> = [
 ];
 
 export const Header = () => {
-  return (
-    <StyledHeader>
-      <Container>
-        <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-          <Logo />
+  const [headerOnTop, setheaderOnTop] = useState(false);
 
-          <FlexWrapper
-            justifyContent={"space-between"}
-            gap={"64px"}
-            alignItems={"center"}
-          >
-            <HeaderMenu menuItems={items} />
-            <MobileMenu menuItems={items} />
-            <ModeBtn>
-              <Icon
-                iconId={"Moon"}
-                width={"37px"}
-                height={"37px"}
-                viewBox={"0 0 24 24"}
-              />
-            </ModeBtn>
-          </FlexWrapper>
-        </FlexWrapper>
-      </Container>
-    </StyledHeader>
-  );
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) setheaderOnTop(true);
+      else setheaderOnTop(false);
+    });
+  }, []);
+
+  const renderHeader = (headerType: boolean) => {
+    if (headerType) {
+      return (
+        <StyledHeader>
+          <Container>
+            <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
+              <Logo />
+
+              <FlexWrapper
+                justifyContent={"space-between"}
+                gap={"64px"}
+                alignItems={"center"}
+              >
+                <HeaderMenu menuItems={items} />
+                <MobileMenu menuItems={items} />
+                <ModeBtn>
+                  <Icon
+                    iconId={"Moon"}
+                    width={"37px"}
+                    height={"37px"}
+                    viewBox={"0 0 24 24"}
+                  />
+                </ModeBtn>
+              </FlexWrapper>
+            </FlexWrapper>
+          </Container>
+        </StyledHeader>
+      );
+    } else {
+      return (
+        <StyledHeaderOnTop>
+          <Container>
+            <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
+              <Logo />
+
+              <FlexWrapper
+                justifyContent={"space-between"}
+                gap={"64px"}
+                alignItems={"center"}
+              >
+                <HeaderMenu menuItems={items} />
+                <MobileMenu menuItems={items} />
+                <ModeBtn>
+                  <Icon
+                    iconId={"Moon"}
+                    width={"37px"}
+                    height={"37px"}
+                    viewBox={"0 0 24 24"}
+                  />
+                </ModeBtn>
+              </FlexWrapper>
+            </FlexWrapper>
+          </Container>
+        </StyledHeaderOnTop>
+      );
+    }
+  };
+
+  return <>{renderHeader(headerOnTop)}</>;
 };
 
 const StyledHeader = styled.header`
@@ -57,6 +99,11 @@ const StyledHeader = styled.header`
   @media ${Theme.media.tablet} {
     backdrop-filter: none;
   }
+`;
+
+const StyledHeaderOnTop = styled(StyledHeader)`
+  background-color: transparent;
+  backdrop-filter: none;
 `;
 
 const ModeBtn = styled.button`

@@ -38,4 +38,11 @@ export const Theme = {
     mobile: "screen and (max-width: 576px)",
     desktop: "screen and (min-width: 1200px)",
   },
+
+  animations: {
+    transitions: {
+      regular: ".2s ease-in-out",
+      mobilePopUp: ".6s ease-in-out",
+    },
+  },
 };

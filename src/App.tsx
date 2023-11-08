@@ -9,6 +9,7 @@ import { Footer } from "./layout/footer/Footer";
 import { MobileApps } from "./layout/sections/main/mobileApps/MobileApps";
 import { Particle } from "./components/particle/Particle";
 import { About } from "./layout/sections/main/about/About";
+import { GoTopBtn } from "./components/goTopBtn/GoTopBtn";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Skills />
       <Contacts />
       <Footer />
+      <GoTopBtn />
     </div>
   );
 }

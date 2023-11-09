@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ElementRef, useRef } from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -7,6 +7,7 @@ import { Button } from "../../../components/Button";
 import { Socials } from "../../../components/socials/Socials";
 import { Container } from "../../../components/Container";
 import { Theme } from "../../../styles/Theme";
+import emailjs from "@emailjs/browser";
 
 const iconsSocial = ["Instagram", "Telegram"];
 
@@ -30,6 +31,32 @@ const coordinatorsData = [
 ];
 
 export const Contacts = () => {
+  const form = useRef<ElementRef<`form`>>(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_ymf7xr8",
+        "template_2eh4w5h",
+        form.current,
+        "LPuUZ5uTiHER9Xf0k",
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+
+    e.target.reset();
+  };
+
   return (
     <StyledContacts id={"contacts"}>
       <Container>
@@ -43,13 +70,28 @@ export const Contacts = () => {
           gap="65px"
         >
           <Contact>
-            <StyledForm>
+            <StyledForm ref={form} onSubmit={sendEmail}>
               <FormTitle>GET IN TOUCH</FormTitle>
               <FieldArea>
-                <Field placeholder={"E-Mail"} type={"email"} name={"email"} />
-                <Field placeholder={"Phone"} type={"number"} name={"Phone"} />
+                <Field
+                  required
+                  placeholder={"E-Mail"}
+                  type={"email"}
+                  name={"user_email"}
+                />
+                <Field
+                  required
+                  placeholder={"Phone"}
+                  type={"number"}
+                  name={"user_phone"}
+                />
               </FieldArea>
-              <Field placeholder={"Message"} as={"textarea"} />
+              <Field
+                required
+                placeholder={"Message"}
+                as={"textarea"}
+                name={"message"}
+              />
               <Button type="submit">Send</Button>
             </StyledForm>
             <Coordinators>

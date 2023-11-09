@@ -5,6 +5,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
 import { Theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
+import { Fade } from "react-awesome-reveal";
 
 const skillData = [
   {
@@ -62,15 +63,17 @@ export const Skills = () => {
           alignItems={"center"}
           gap={"100px;"}
         >
-          {skillData.map((item) => {
-            return (
-              <Skill
-                title={item.title}
-                iconId={item.iconId}
-                viewBox={item.viewBox}
-              />
-            );
-          })}
+          <Fade cascade damping={0.2}>
+            {skillData.map((item) => {
+              return (
+                <Skill
+                  title={item.title}
+                  iconId={item.iconId}
+                  viewBox={item.viewBox}
+                />
+              );
+            })}
+          </Fade>
         </FlexWrapper>
       </Container>
     </StyledSkills>

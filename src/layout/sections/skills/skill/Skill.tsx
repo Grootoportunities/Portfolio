@@ -66,47 +66,6 @@ export const StyledSkill = styled.article`
       height: 130px;
     }
   }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 160px;
-    height: 160px;
-    background-image: linear-gradient(145deg, #e7eeff, rgb(33, 87, 242));
-    border-radius: 50px;
-    box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
-
-    position: absolute;
-    z-index: -2;
-    left: 50%;
-    top: 50%;
-    transform: scale(0);
-
-    @media ${Theme.media.tablet} {
-      width: 120px;
-      height: 120px;
-    }
-  }
-
-  &:hover {
-    ${SkillTitle} {
-      color: ${Theme.colors.secondary};
-    }
-
-    &::before {
-      transform: scale(0);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) scale(1);
-
-      width: 175px;
-      height: 175px;
-
-      ${SkillTitle} {
-        font-size: 30px;
-      }
-    }
   }
 
   @media ${Theme.media.tablet} {

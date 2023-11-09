@@ -7,6 +7,7 @@ import { Container } from "../../../components/Container";
 import me from "../../../assets/images/photo_2023-10-23_15-19-26cut.jpg";
 import { TabMenu, TabsStatusType } from "./tabMenu/TabMenu";
 import Tilt from "react-parallax-tilt";
+import { AnimatePresence, motion } from "framer-motion";
 
 const tabItems: Array<{
   title: string;
@@ -24,52 +25,74 @@ const biographyItems = [
     pastTitle: "Development",
     description: "React / Redux / Type Script",
     type: "main",
+    id: 1,
   },
   {
     title: "User experience development",
     pastTitle: "Development",
     description: "Delight the user and make it work.",
     type: "main",
+    id: 2,
   },
   {
     title: "Interaction design ",
     pastTitle: "Development",
     description: "Use of different UI libraries",
     type: "main",
+    id: 3,
   },
   {
     title: "Front-end developer",
     pastTitle: "Learning app “Memorization Cards",
     description: "02/2022 - present",
     type: "experience",
+    id: 4,
   },
   {
     title: "Front-end developer",
     pastTitle: "Social project “Ta Na”",
     description: "08/2021 - 02/2022",
     type: "experience",
+    id: 5,
   },
   {
     title: "Front-End Developer",
     pastTitle: "IT-Incubator",
     description: "2023 - present",
     type: "education",
+    id: 6,
   },
   {
     title: "Software Engineer",
     pastTitle: "Belarusian National Technical University",
     description: "2019-2023",
     type: "education",
+    id: 7,
   },
 ];
 
 const skillsItems = [
-  "Creation Web apps using ReactJs with TypeScript and various libraries",
-  "Using Redux and Redux-toolkit to manage application state",
-  "Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries",
-  "Implementation of multilingual application using localization management platform",
-  "Сheck the correctness of the code with Unit Tests and take Storybook for demonstration of individual modules of the application",
-  "Creation of applications with login and registration forms, as well as functionality with the ability to add, delete, change and filter data.",
+  {
+    text: "Creation Web apps using ReactJs with TypeScript and various libraries",
+    id: 1,
+  },
+  { text: "Using Redux and Redux-toolkit to manage application state", id: 2 },
+  {
+    text: "Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries",
+    id: 3,
+  },
+  {
+    text: "Implementation of multilingual application using localization management platform",
+    id: 4,
+  },
+  {
+    text: "Сheck the correctness of the code with Unit Tests and take Storybook for demonstration of individual modules of the application",
+    id: 5,
+  },
+  {
+    text: "Creation of applications with login and registration forms, as well as functionality with the ability to add, delete, change and filter data.",
+    id: 6,
+  },
 ];
 
 export const Biography = () => {
@@ -77,16 +100,34 @@ export const Biography = () => {
 
   const renderText = (filterType: string) => {
     if (currentFilterStatus === "skills") {
-      return skillsItems.map((item) => <SkillsInfo>{item}</SkillsInfo>);
+      return skillsItems.map((item) => (
+        <motion.div
+          layout
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key={item.id}
+        >
+          <SkillsInfo key={item.id}>{item.text}</SkillsInfo>
+        </motion.div>
+      ));
     } else {
       return biographyItems
         .filter((info) => info.type === filterType)
         .map((item) => {
           return (
-            <BiographyInfo>
-              <span>{item.title}</span> - {item.pastTitle}
-              <p>{item.description}</p>
-            </BiographyInfo>
+            <motion.div
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              key={item.id}
+            >
+              <BiographyInfo key={item.id}>
+                <span>{item.title}</span> - {item.pastTitle}
+                <p>{item.description}</p>
+              </BiographyInfo>
+            </motion.div>
           );
         });
     }
@@ -119,7 +160,9 @@ export const Biography = () => {
                 changeFilterStatus={changeFilterStatus}
                 currentFilterStatus={currentFilterStatus}
               />
-              {renderText(currentFilterStatus)}
+              <AnimatePresence>
+                {renderText(currentFilterStatus)}
+              </AnimatePresence>
             </FlexWrapper>
           </Information>
           <Tilt
@@ -154,7 +197,7 @@ const StyledBiography = styled.section`
 `;
 
 const Information = styled.article`
-  min-height: 967px;
+  min-height: 968px;
   height: 100%;
 
   background-image: linear-gradient(

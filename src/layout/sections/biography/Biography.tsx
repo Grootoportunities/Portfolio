@@ -140,7 +140,7 @@ export const Biography = () => {
   return (
     <StyledBiography id={"about"}>
       <Container>
-        <SectionTitle sectionColor={"secondary"} pseudoColor={"primary"}>
+        <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
           ABOUT ME
         </SectionTitle>
 
@@ -187,7 +187,7 @@ const StyledBiography = styled.section`
   &::before {
     content: "";
     height: 100%;
-    width: 430px;
+    width: 30%;
     background-color: ${Theme.colors.primary};
     position: absolute;
     z-index: -1;
@@ -220,7 +220,11 @@ const MeImg = styled.img.attrs(() => ({
   src: me,
   alt: "Me",
 }))`
+  max-width: 450px;
+  width: 100%;
   height: 600px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 15px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.2);
   @media ${Theme.media.tablet} {

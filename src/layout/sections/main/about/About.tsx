@@ -118,9 +118,11 @@ const Photo = styled.img.attrs(() => ({
   src: photo,
   alt: "Photo",
 }))`
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
+  object-position: center;
   border-radius: 335px;
   border: 25px solid #fff;
 

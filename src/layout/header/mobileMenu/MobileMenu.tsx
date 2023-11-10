@@ -102,6 +102,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: 40px;
     bottom: 50px;
+    transition: ${Theme.animations.transitions.mobilePopUp};
 
     ${(props) =>
       props.isOpen &&

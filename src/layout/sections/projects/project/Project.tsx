@@ -61,7 +61,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
   flex-grow: 1;
   border-radius: 26px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  //height: 100%;
   z-index: 0;
 
   position: relative;

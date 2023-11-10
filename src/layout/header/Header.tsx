@@ -107,6 +107,7 @@ const StyledHeaderOnTop = styled(StyledHeader)`
 `;
 
 const ModeBtn = styled.button`
+  display: none;
   @media ${Theme.media.tablet} {
     display: none;
   }

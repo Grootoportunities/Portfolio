@@ -101,7 +101,7 @@ const StyledMain = styled.section`
   &::before {
     content: "";
     height: 100%;
-    width: 31%;
+    width: 30%;
     background-color: ${Theme.colors.primary};
     position: absolute;
     z-index: -3;

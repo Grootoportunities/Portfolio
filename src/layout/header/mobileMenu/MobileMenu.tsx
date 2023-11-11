@@ -68,7 +68,7 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
     flex-direction: column;
     align-items: center;
     transform: translateX(200%);
@@ -193,7 +193,7 @@ const ListItem = styled.li`
   ${NavLink} {
     color: ${Theme.colors.font.pramiary.light};
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     &::before {
       content: "";

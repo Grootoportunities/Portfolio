@@ -36,7 +36,17 @@ export const About = () => {
           ipsum in justo vestibulum vulputate.
         </Description>
         <RegisterButtons>
-          <Button>See Projects</Button>
+          <Button>
+            <NavLink
+              activeClass={"active"}
+              smooth
+              to={"projects"}
+              spy
+              offset={-75}
+            >
+              See Projects
+            </NavLink>
+          </Button>
           <NavLink to={"#"}>Download Resume</NavLink>
         </RegisterButtons>
       </FlexWrapper>

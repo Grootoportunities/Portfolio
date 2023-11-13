@@ -70,32 +70,40 @@ const StyledProjects = styled.section`
   position: relative;
   z-index: 1;
 
-  &::before {
-    content: url(../../../../public/assets/svg/dots.svg);
-    display: inline-block;
-    width: 413px;
-    height: 505px;
-
-    position: absolute;
-    z-index: -1;
-    top: 85px;
-    left: 127px;
-  }
-
-  &::after {
-    content: "+";
-    display: inline-block;
-    transform: rotate(-45deg);
-    color: rgba(33, 87, 242, 0.1);
-    position: absolute;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 550px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 136%; /* 748px */
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: url(../../../../public/assets/svg/dots.svg);
+  //   display: inline-block;
+  //   width: 413px;
+  //   height: 505px;
+  //
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 85px;
+  //   left: 127px;
+  // }
+  //
+  // &::after {
+  //   content: "+";
+  //   display: inline-block;
+  //   transform: rotate(-45deg);
+  //   color: rgba(33, 87, 242, 0.1);
+  //   position: absolute;
+  //   text-align: center;
+  //   font-family: Roboto;
+  //   font-size: 550px;
+  //   font-style: normal;
+  //   font-weight: 600;
+  //   line-height: 136%; /* 748px */
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: -1;
+  //   position: absolute;
+  // }
+  //
+  // @media ${Theme.media.tablet} {
+  //   &::before,
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
 `;

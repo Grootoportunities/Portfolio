@@ -42,7 +42,7 @@ export const About = () => {
               smooth
               to={"projects"}
               spy
-              offset={-75}
+              offset={-10}
             >
               See Projects
             </NavLink>

@@ -54,7 +54,6 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header<{ isOnTop: boolean }>`
-  //backdrop-filter: blur(5px);
   background-color: ${Theme.colors.secondary};
   position: fixed;
   top: 0;

@@ -22,7 +22,7 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
                 smooth
                 to={item.hrefItem}
                 spy
-                offset={-75}
+                offset={-10}
               >
                 {item.title}
               </NavLink>

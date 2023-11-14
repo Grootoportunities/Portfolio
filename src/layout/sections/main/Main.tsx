@@ -108,8 +108,8 @@ const StyledMain = styled.section`
     left: 0;
     bottom: 0;
 
-    ${Theme.media.tablet} {
-      width: 50vw;
+    @media ${Theme.media.tablet} {
+      width: 50%;
     }
   }
 `;

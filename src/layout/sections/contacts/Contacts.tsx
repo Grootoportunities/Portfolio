@@ -123,6 +123,7 @@ const Contact = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   max-width: 932px;
   width: 100%;

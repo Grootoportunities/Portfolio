@@ -16,6 +16,11 @@ export const Button = styled.button`
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media ${Theme.media.mobile} {
+      font-size: 8px;
+      white-space: nowrap;
+    }
   }
 
   &:hover,
@@ -26,5 +31,10 @@ export const Button = styled.button`
 
   &:active {
     transform: translateY(5px);
+  }
+
+  @media ${Theme.media.mobile} {
+    font-size: 8px;
+    //padding: 0;
   }
 `;

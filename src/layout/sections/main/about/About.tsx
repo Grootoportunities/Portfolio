@@ -16,6 +16,7 @@ export const About = () => {
         direction={"column"}
         justifyContent={"space-evenly"}
         gap={"25px"}
+        wrap={"wrap"}
       >
         <Name>
           I'm <span>Daniil Lameika</span>
@@ -31,6 +32,7 @@ export const About = () => {
             }}
           />
         </MainTitle>
+        <MediaMainTitle>Front-End Developer</MediaMainTitle>
         <Description>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
           ipsum in justo vestibulum vulputate.
@@ -50,6 +52,16 @@ export const About = () => {
           <NavLink to={"#"}>Download Resume</NavLink>
         </RegisterButtons>
       </FlexWrapper>
+
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            position: "absolute",
+            right: "50%",
+            transform: "translate(-50%)",
+          }}
+        ></div>
+      </div>
     </StyledAbout>
   );
 };
@@ -60,8 +72,8 @@ const StyledAbout = styled.article`
   gap: 76px;
   flex-wrap: wrap;
   position: absolute;
-  margin: 0 auto;
   left: 50%;
+  top: 188px;
   transform: translateX(-50%);
 
   background-image: linear-gradient(
@@ -73,22 +85,31 @@ const StyledAbout = styled.article`
   border-radius: 200px 0;
   border: 2px solid ${Theme.colors.secondary};
   backdrop-filter: blur(4px);
-  max-width: 1158px;
-  width: 100%;
+
+  width: 80%;
   padding: 43px 11px 41px 104px;
-  margin-top: 188px;
 
   @media ${Theme.media.tablet} {
-    gap: 0;
-    max-width: 590px;
-    padding: 29px 51px 86px 76px;
+    gap: 25px;
+    top: 125px;
+    padding: 30px 0 86px;
     justify-content: center;
+  }
+
+  @media ${Theme.media.mobile} {
+    border-radius: 110px 0;
+    padding: 20px 160px 0;
   }
 `;
 
 const RegisterButtons = styled.div`
   display: flex;
+  align-items: center;
   gap: 32px;
+
+  @media ${Theme.media.mobile} {
+    justify-content: space-between;
+  }
 `;
 
 const Name = styled.h2`
@@ -98,6 +119,8 @@ const Name = styled.h2`
     Fmin: 34,
     color: Theme.colors.font.pramiary.light,
   })}
+
+  white-space: nowrap;
 
   span {
     color: ${Theme.colors.accent};
@@ -109,11 +132,25 @@ const MainTitle = styled.h1`
     color: Theme.colors.font.pramiary.light,
     weight: 700,
     Fmax: 60,
-    Fmin: 34,
+    Fmin: 30,
   })}
+
+  white-space: nowrap;
 
   p {
     display: none;
+  }
+
+  @media ${Theme.media.mobile} {
+    display: none;
+  }
+`;
+
+const MediaMainTitle = styled(MainTitle)`
+  display: none;
+
+  @media ${Theme.media.mobile} {
+    display: block;
   }
 `;
 
@@ -122,6 +159,14 @@ const Description = styled.p`
   width: 100%;
 
   ${font({ Fmax: 20, Fmin: 11 })}
+
+  @media ${Theme.media.tablet} {
+    margin-bottom: 30px;
+  }
+
+  @media ${Theme.media.mobile} {
+    margin-bottom: 0;
+  }
 `;
 
 const Photo = styled.img.attrs(() => ({
@@ -133,11 +178,17 @@ const Photo = styled.img.attrs(() => ({
   height: 400px;
   object-fit: cover;
   object-position: center;
-  border-radius: 335px;
-  border: 25px solid #fff;
+  border-radius: 50%;
+  border: 25px solid ${Theme.colors.secondary};
 
   @media ${Theme.media.tablet} {
     width: 335px;
     height: 335px;
+  }
+
+  @media ${Theme.media.mobile} {
+    width: 190px;
+    height: 190px;
+    border: 14px solid ${Theme.colors.secondary};
   }
 `;

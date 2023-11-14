@@ -8,6 +8,11 @@ export const NavLink = styled(Link)`
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  padding: 15px 0;
+  //padding: 15px 0;
+  //margin: 15px 0;
   //cursor: pointer;
+
+  @media ${Theme.media.mobile} {
+    font-size: 8px;
+  }
 `;

@@ -21,7 +21,7 @@ font-family: ${family || "Roboto"};
 font-weight: ${weight || 400};
 color: ${color || Theme.colors.font.pramiary.dark};
 line-height: ${lineHeight || 1.2};
-font-size: calc( (100vw - 360px)/(1920 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+font-size: calc((100vw - 360px)/(1920 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `;
 
 // Vmax(1440) - Наибольшее разрешение экрана (в данном случае для десктопа)

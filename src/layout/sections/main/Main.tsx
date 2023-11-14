@@ -96,6 +96,20 @@ const StyledMain = styled.section`
     border-radius: 50%;
     right: 156px;
     bottom: 242px;
+
+    @media ${Theme.media.tablet} {
+      right: 50px;
+      bottom: 150px;
+    }
+
+    @media ${Theme.media.mobile} {
+      right: 20px;
+      bottom: 125px;
+
+      width: 100px;
+      height: 100px;
+      border: 10px solid ${Theme.colors.pseudo};
+    }
   }
 
   &::before {

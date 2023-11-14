@@ -92,8 +92,9 @@ const StyledAbout = styled.article`
   @media ${Theme.media.tablet} {
     gap: 25px;
     top: 125px;
-    padding: 30px 0 86px;
+    padding: 20px 100px 0;
     justify-content: center;
+    border-radius: 200px 0 110px 0;
   }
 
   @media ${Theme.media.mobile} {
@@ -141,7 +142,7 @@ const MainTitle = styled.h1`
     display: none;
   }
 
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
     display: none;
   }
 `;
@@ -149,7 +150,7 @@ const MainTitle = styled.h1`
 const MediaMainTitle = styled(MainTitle)`
   display: none;
 
-  @media ${Theme.media.mobile} {
+  @media ${Theme.media.tablet} {
     display: block;
   }
 `;

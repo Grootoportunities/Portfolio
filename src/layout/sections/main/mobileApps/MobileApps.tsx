@@ -27,13 +27,7 @@ export const MobileApps = () => {
   return (
     <StyledMobileApps>
       <Container>
-        <FlexWrapper
-          gap={"13px"}
-          wrap={"wrap"}
-          direction={"column"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
+        <FlexWrapper gap={"13px"} wrap={"wrap"} justifyContent={"center"}>
           {appData.map((item) => {
             return <App title={item.title} imgSrc={item.imgSrc} />;
           })}
@@ -45,8 +39,30 @@ export const MobileApps = () => {
 
 const StyledMobileApps = styled.section`
   display: none;
-
   background-color: ${Theme.colors.secondary};
+  position: relative;
+
+  &::after {
+    content: "+";
+    display: inline-block;
+    color: ${Theme.colors.pseudo};
+    background-color: transparent;
+    position: absolute;
+    z-index: -1; //todo: Почему не заходит за артикль?
+
+    right: 15%;
+    top: -144%;
+    transform: rotate(-45deg);
+    text-align: center;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 600;
+
+    @media ${Theme.media.mobile} {
+      top: -205%;
+    }
+  }
+
   @media ${Theme.media.tablet} {
     display: block;
   }

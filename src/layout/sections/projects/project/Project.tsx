@@ -55,8 +55,7 @@ const StyledProject = styled.article<StyledProjectPropsType>`
   background-size: cover;
   background-position: center;
 
-  max-width: 540px;
-  width: 100%;
+  width: 100%; //330px; todo: Не работает с флекс гроу, разобраться
 
   flex-grow: 1;
   border-radius: 26px;
@@ -103,23 +102,23 @@ const StyledProject = styled.article<StyledProjectPropsType>`
     transition: ${Theme.animations.transitions.regular};
   }
 
-  // ${Theme.media.desktop} {
-  //   //max-width: 540px; todo: Не получается для десктопов :c
-  // }
-  //
-  // ${Theme.media.tablet} {
-  //   //todo: Какого хуя не работаешь??????
-  //   ${ProjectButtons} {
-  //     opacity: 1;
-  //   }
-  //
-  //   background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
-  //     url(${(props) => props.imgSrc});
-  //
-  //   &::before {
-  //     opacity: 1;
-  //   }
-  // }
+  @media ${Theme.media.desktop} {
+    max-width: 540px; //todo: Не получается для десктопов :c
+  }
+
+  @media ${Theme.media.tablet} {
+    //todo: Какого хуя не работаешь??????
+    ${ProjectButtons} {
+      opacity: 1;
+    }
+
+    background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
+      url(${(props) => props.imgSrc});
+
+    &::before {
+      opacity: 1;
+    }
+  }
 `;
 
 const Title = styled.h3`

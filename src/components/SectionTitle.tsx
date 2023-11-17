@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 type SectionTitlePropsType = {
   sectionColor: "primary" | "secondary";
@@ -7,9 +8,11 @@ type SectionTitlePropsType = {
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
+  ${font({ weight: 600, Fmax: 32, Fmin: 20 })}
+
   text-align: center;
-  font-size: 32px;
-  font-weight: 600;
+  //font-size: 32px;
+  //font-weight: 600;
   margin-bottom: 85px;
 
   position: relative;
@@ -24,6 +27,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     css<SectionTitlePropsType>`
       color: ${Theme.colors.font.pramiary.dark};
     `}
+  
   &::before {
     content: "";
     display: inline-block;
@@ -31,6 +35,11 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     width: 120px;
     background-color: ${Theme.colors.font.pramiary.dark};
     border-radius: 100px;
+
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
 
     ${(props) =>
       props.pseudoColor === "primary" &&
@@ -43,10 +52,5 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
       css<SectionTitlePropsType>`
         background-color: ${Theme.colors.primary};
       `}
-
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
   }
 `;

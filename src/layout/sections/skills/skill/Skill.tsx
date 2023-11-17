@@ -35,6 +35,8 @@ export const SkillTitle = styled.h3`
     color: Theme.colors.font.pramiary.dark,
     family: "Kalameh, sans-serif",
     weight: 700,
+    Fmax: 20,
+    Fmin: 14,
   })}
 `;
 

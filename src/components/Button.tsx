@@ -34,7 +34,7 @@ export const Button = styled.button`
   }
 
   @media ${Theme.media.mobile} {
-    font-size: 8px;
+    font-size: 12px;
     //padding: 0;
   }
 `;

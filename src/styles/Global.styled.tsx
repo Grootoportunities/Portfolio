@@ -42,6 +42,10 @@ export const GlobalStyle = createGlobalStyle`
     @media ${Theme.media.tablet} {
       padding: 60px 0;
     }
+    
+    @media ${Theme.media.mobile} {
+      padding: 30px 0;
+    }
   }
   
   p {

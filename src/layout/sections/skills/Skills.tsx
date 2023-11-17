@@ -59,7 +59,7 @@ export const Skills = () => {
         </SectionTitle>
         <FlexWrapper
           wrap={"wrap"}
-          justifyContent={"space-between"}
+          justifyContent={"space-around"}
           alignItems={"center"}
           gap={"100px;"}
         >

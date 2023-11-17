@@ -21,10 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     min-width: 360px;
   }
-  
-  .App {
-    position: relative;
-  }
 
   a {
     text-decoration: none;
@@ -53,13 +49,4 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 20px;
     font-weight: 400;
   }
-  
-  
-  // section:nth-of-type(odd) {
-  //   background-color: ${Theme.colors.secondary};
-  // }
-  //
-  // section:nth-of-type(even) {
-  //   background-color: ${Theme.colors.primary};
-  // }
 `;

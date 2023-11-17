@@ -8,7 +8,6 @@ import { Contacts } from "./layout/sections/contacts/Contacts";
 import { Footer } from "./layout/footer/Footer";
 import { MobileApps } from "./layout/sections/main/mobileApps/MobileApps";
 import { Particle } from "./components/particle/Particle";
-import { About } from "./layout/sections/main/about/About";
 import { GoTopBtn } from "./components/goTopBtn/GoTopBtn";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
       <Particle />
       <Header />
-      <About />
       <Main />
       <MobileApps />
       <Projects />

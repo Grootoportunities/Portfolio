@@ -48,7 +48,7 @@ const StyledMobileApps = styled.section`
     color: ${Theme.colors.pseudo};
     background-color: transparent;
     position: absolute;
-    z-index: -1; //todo: Почему не заходит за артикль?
+    z-index: -1;
 
     right: 20%;
     top: -144%;
@@ -58,8 +58,12 @@ const StyledMobileApps = styled.section`
     font-style: normal;
     font-weight: 600;
 
+    @media ${Theme.media.tablet} {
+      top: -167%;
+    }
+
     @media ${Theme.media.mobile} {
-      top: -205%;
+      top: -210%;
     }
   }
 

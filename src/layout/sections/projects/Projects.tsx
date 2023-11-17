@@ -45,11 +45,7 @@ export const Projects = () => {
         <SectionTitle sectionColor={"secondary"} pseudoColor={"secondary"}>
           MY PROJECTS
         </SectionTitle>
-        <FlexWrapper
-          justifyContent={"space-between"}
-          gap={"38px"}
-          wrap={"wrap"}
-        >
+        <FlexWrapper justifyContent={"space-around"} gap={"40px"} wrap={"wrap"}>
           {projectData.map((item) => {
             return (
               <Project

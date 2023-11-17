@@ -50,7 +50,7 @@ const StyledMobileApps = styled.section`
     position: absolute;
     z-index: -1; //todo: Почему не заходит за артикль?
 
-    right: 15%;
+    right: 20%;
     top: -144%;
     transform: rotate(-45deg);
     text-align: center;

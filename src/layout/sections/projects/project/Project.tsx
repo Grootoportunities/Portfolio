@@ -15,8 +15,6 @@ type StyledProjectPropsType = {
 };
 
 export const Project = (props: ProjectPropsType) => {
-  // const { imgSrc, title, description, backImg } = props; todo: Деструктуризация!
-
   return (
     <StyledProject imgSrc={props.imgSrc}>
       <ProjectButtons>
@@ -56,12 +54,13 @@ const StyledProject = styled.article<StyledProjectPropsType>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   max-width: 540px;
-  width: 100%; //330px не получается :c
+  width: 100%;
+
   flex-grow: 1;
   border-radius: 26px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
-  //height: 100%;
   z-index: 0;
 
   position: relative;
@@ -104,23 +103,23 @@ const StyledProject = styled.article<StyledProjectPropsType>`
     transition: ${Theme.animations.transitions.regular};
   }
 
-  ${Theme.media.desktop} {
-    //max-width: 540px; todo: Не получается для десктопов :c
-  }
-
-  ${Theme.media.tablet} {
-    //todo: Какого хуя не работаешь??????
-    ${ProjectButtons} {
-      opacity: 1;
-    }
-
-    background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
-      url(${(props) => props.imgSrc});
-
-    &::before {
-      opacity: 1;
-    }
-  }
+  // ${Theme.media.desktop} {
+  //   //max-width: 540px; todo: Не получается для десктопов :c
+  // }
+  //
+  // ${Theme.media.tablet} {
+  //   //todo: Какого хуя не работаешь??????
+  //   ${ProjectButtons} {
+  //     opacity: 1;
+  //   }
+  //
+  //   background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
+  //     url(${(props) => props.imgSrc});
+  //
+  //   &::before {
+  //     opacity: 1;
+  //   }
+  // }
 `;
 
 const Title = styled.h3`

@@ -8,11 +8,9 @@ type SectionTitlePropsType = {
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-  ${font({ weight: 600, Fmax: 32, Fmin: 20 })}
+  ${font({ weight: 600, Fmax: 32, Fmin: 30 })}
 
   text-align: center;
-  //font-size: 32px;
-  //font-weight: 600;
   margin-bottom: 85px;
 
   position: relative;

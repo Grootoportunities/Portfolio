@@ -32,12 +32,28 @@ const CoordinatorTitle = styled.h4`
   color: ${Theme.colors.font.secondary.darker};
   font-size: 16px;
   font-weight: 500;
+
+  @media ${Theme.media.tablet} {
+    font-size: 30px;
+  }
+
+  @media ${Theme.media.mobile} {
+    font-size: 18px;
+  }
 `;
 
 const CoordinatorText = styled.span`
   color: ${Theme.colors.font.secondary.dark};
   font-size: 12px;
   font-weight: 400;
+
+  @media ${Theme.media.tablet} {
+    font-size: 23px;
+  }
+
+  @media ${Theme.media.mobile} {
+    font-size: 14px;
+  }
 `;
 
 const Info = styled.div`

@@ -121,14 +121,24 @@ const StyledContacts = styled.section`
 
 const Contact = styled.article`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 130px;
+
+  box-shadow: 8px 8px 34px 0 rgba(0, 0, 0, 0.05);
 
   max-width: 932px;
   width: 100%;
 
-  padding: 53px 113px 46px 82px;
+  padding: 50px 5px;
+
+  @media ${Theme.media.tablet} {
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    box-shadow: none;
+  }
 `;
 
 const StyledForm = styled.form`
@@ -144,11 +154,29 @@ const StyledForm = styled.form`
     height: 152px;
     resize: none;
   }
+
+  @media ${Theme.media.tablet} {
+    box-shadow: 8px 8px 34px 0 rgba(0, 0, 0, 0.05);
+    padding: 55px 80px 45px;
+  }
+  @media ${Theme.media.mobile} {
+    padding: 30px 50px;
+  }
 `;
 
 const Coordinators = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${Theme.media.tablet} {
+    gap: 70px;
+    padding: 55px 80px 45px;
+    box-shadow: 15px 15px 65px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  @media ${Theme.media.mobile} {
+    padding: 40px 43px;
+  }
 `;
 
 const FormTitle = styled.h3`

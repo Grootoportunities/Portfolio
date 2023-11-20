@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { Icon } from "../../components/icon/Icon";
-import { Theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { S } from "./Header_Styles";
 
 const items: Array<{ title: string; hrefItem: string }> = [
   { title: "Home", hrefItem: "home" },
@@ -16,7 +15,7 @@ const items: Array<{ title: string; hrefItem: string }> = [
   { title: "Contacts", hrefItem: "contacts" },
 ];
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [headerOnTop, setheaderOnTop] = useState(true);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <StyledHeader isOnTop={headerOnTop}>
+    <S.Header isOnTop={headerOnTop}>
       <Container>
         <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
           <Logo />
@@ -38,46 +37,17 @@ export const Header = () => {
           >
             <HeaderMenu menuItems={items} />
             <MobileMenu menuItems={items} />
-            <ModeBtn>
+            <S.ModeBtn>
               <Icon
                 iconId={"Moon"}
                 width={"37px"}
                 height={"37px"}
                 viewBox={"0 0 24 24"}
               />
-            </ModeBtn>
+            </S.ModeBtn>
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header<{ isOnTop: boolean }>`
-  background-color: ${Theme.colors.secondary};
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  transition: ${Theme.animations.transitions.regular};
-
-  ${(props) =>
-    props.isOnTop &&
-    css<{ isOnTop: boolean }>`
-      background-color: transparent;
-      padding: 20px 0;
-    `}
-
-  @media ${Theme.media.tablet} {
-    padding: 0;
-    background-color: ${Theme.colors.secondary};
-  }
-`;
-
-const ModeBtn = styled.button`
-  display: none;
-  @media ${Theme.media.tablet} {
-    display: none;
-  }
-`;

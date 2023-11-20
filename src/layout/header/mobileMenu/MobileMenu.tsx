@@ -31,7 +31,13 @@ export const MobileMenu = (props: MobileMenuPropsType) => {
           {props.menuItems.map((item, index) => {
             return (
               <ListItem key={index}>
-                <NavLink activeClass={"active"} smooth to={item.hrefItem} spy>
+                <NavLink
+                  activeClass={"active"}
+                  smooth
+                  to={item.hrefItem}
+                  spy
+                  offset={-50}
+                >
                   {item.title}
                 </NavLink>
               </ListItem>

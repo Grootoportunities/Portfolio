@@ -183,6 +183,8 @@ const FormTitle = styled.h3`
   color: ${Theme.colors.font.secondary.darker};
   font-size: 36px;
   font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
 `;
 
 const FieldArea = styled.div`

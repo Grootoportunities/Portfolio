@@ -8,6 +8,7 @@ import me from "../../../assets/images/photo_2023-10-23_15-19-26cut.jpg";
 import { TabMenu, TabsStatusType } from "./tabMenu/TabMenu";
 import Tilt from "react-parallax-tilt";
 import { AnimatePresence, motion } from "framer-motion";
+import { font } from "../../../styles/Common";
 
 const tabItems: Array<{
   title: string;
@@ -144,7 +145,12 @@ export const Biography = () => {
           ABOUT ME
         </SectionTitle>
 
-        <FlexWrapper justifyContent={"space-around"} alignItems={"center"}>
+        <FlexWrapper
+          justifyContent={"space-around"}
+          alignItems={"center"}
+          wrap={"wrap-reverse"}
+          gap={"25px"}
+        >
           <Information>
             <FlexWrapper direction={"column"} gap={"25px"}>
               <Name>Daniil Lameika</Name>
@@ -193,6 +199,10 @@ const StyledBiography = styled.section`
     z-index: -1;
     right: 0;
     bottom: 0;
+
+    @media ${Theme.media.tablet} {
+      width: 50%;
+    }
   }
 `;
 
@@ -212,7 +222,13 @@ const Information = styled.article`
   padding: 75px 30px 65px 60px;
 
   @media ${Theme.media.tablet} {
-    display: none;
+    min-height: 100vh;
+  }
+
+  @media ${Theme.media.mobile} {
+    border-radius: 110px 0;
+    padding: 30px 30px 30px 50px;
+    min-height: 100vh;
   }
 `;
 
@@ -227,15 +243,10 @@ const MeImg = styled.img.attrs(() => ({
   object-position: center;
   border-radius: 15px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.2);
-  @media ${Theme.media.tablet} {
-    display: none;
-  }
 `;
 
 const Name = styled.h3`
-  color: ${Theme.colors.accent};
-  font-size: 60px;
-  font-weight: 700;
+  ${font({ color: Theme.colors.accent, weight: 700, Fmax: 60, Fmin: 34 })}
 
   position: relative;
 
@@ -252,14 +263,20 @@ const Name = styled.h3`
 `;
 
 const Stream = styled.h4`
+  ${font({
+    color: Theme.colors.font.pramiary.light,
+    family: "Kalameh, sans-serif",
+    weight: 700,
+    Fmax: 30,
+    Fmin: 20,
+  })}
+
   text-align: center;
-  color: ${Theme.colors.font.pramiary.light};
-  font-family: Kalameh, sans-serif;
-  font-size: 30px;
-  font-weight: 700;
 `;
 
 const CommonInformation = styled.p`
+  //${font({ Fmax: 20, Fmin: 18 })}
+
   max-width: 700px;
   width: 100%;
 `;

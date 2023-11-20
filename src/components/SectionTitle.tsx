@@ -51,4 +51,12 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
         background-color: ${Theme.colors.primary};
       `}
   }
+
+  @media ${Theme.media.tablet} {
+    margin-bottom: 50px;
+  }
+
+  @media ${Theme.media.mobile} {
+    margin-bottom: 40px;
+  }
 `;

@@ -44,7 +44,17 @@ const StyledTabMenu = styled.nav`
   ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 58px;
+
+    @media ${Theme.media.tablet} {
+      justify-content: flex-start;
+      gap: 17px;
+    }
+
+    @media ${Theme.media.mobile} {
+      gap: 24px;
+    }
   }
 
   margin: 15px 0;
@@ -99,4 +109,8 @@ const ListItem = styled.li<{ active: boolean }>`
         }
       }
     `}
+
+  @media ${Theme.media.mobile} {
+    margin: 10px 0;
+  }
 `;

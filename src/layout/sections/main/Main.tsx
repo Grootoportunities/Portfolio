@@ -172,7 +172,7 @@ const Description = styled.p`
   max-width: 376px;
   width: 100%;
 
-  ${font({ Fmax: 20, Fmin: 11 })}
+  ${font({ Fmax: 20, Fmin: 14 })}
 
   @media ${Theme.media.tablet} {
     margin-bottom: 30px;

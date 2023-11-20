@@ -213,7 +213,7 @@ const Apps = styled.div`
   position: relative;
   z-index: -3;
 
-  margin-top: 50px;
+  margin-top: 66px;
 
   &::before {
     content: "+";
@@ -223,8 +223,8 @@ const Apps = styled.div`
     position: absolute;
     z-index: -4; //todo: Почему не заходит за артикль?
 
-    bottom: 458%;
-    left: -30%;
+    bottom: 465%;
+    right: 50%;
     transform: rotate(-45deg);
     text-align: center;
     font-size: 150px;
@@ -233,7 +233,7 @@ const Apps = styled.div`
   }
 
   &:last-child {
-    margin-right: 130px;
+    margin-right: 133px;
 
     @media ${Theme.media.iPadAir} {
       margin-right: 0;

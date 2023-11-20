@@ -18,6 +18,10 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${Theme.colors.primary};
   padding: 40px 0;
+
+  @media ${Theme.media.tablet} {
+    padding: 0 0 10px;
+  }
 `;
 
 const Copyright = styled.small`

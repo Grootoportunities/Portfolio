@@ -227,7 +227,7 @@ const Information = styled.article`
 
   @media ${Theme.media.mobile} {
     border-radius: 110px 0;
-    padding: 30px 30px 30px 50px;
+    padding: 50px 30px 30px;
     min-height: 100vh;
   }
 `;

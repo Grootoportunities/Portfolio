@@ -265,11 +265,12 @@ const MobileApps = styled.section`
     font-weight: 600;
 
     @media ${Theme.media.tablet} {
-      top: -167%;
+      top: -180%;
+      right: 18%;
     }
 
     @media ${Theme.media.mobile} {
-      top: -210%;
+      top: -265%;
     }
   }
 

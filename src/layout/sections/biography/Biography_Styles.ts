@@ -26,7 +26,7 @@ const Biography = styled.section`
 `;
 
 const Information = styled.article`
-  min-height: 968px;
+  min-height: 100vh;
   height: 100%;
 
   background-image: linear-gradient(

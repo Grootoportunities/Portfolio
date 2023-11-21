@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
   const [headerOnTop, setheaderOnTop] = useState(true);
   const [width, setWidth] = useState(window.innerWidth);
 
-  const breakpoint = 768;
+  const breakpoint = 769;
 
   useEffect(() => {
     window.addEventListener("scroll", () => {

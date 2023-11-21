@@ -8,7 +8,11 @@ import { Container } from "../../../components/Container";
 import emailjs from "@emailjs/browser";
 import { S } from "./Contacts_Styles";
 
-const iconsSocial = ["Instagram", "Telegram"];
+const socialItems: Array<{ iconId: string; link: string }> = [
+  { iconId: "GitHub", link: "https://github.com/Grootoportunities" },
+  { iconId: "Instagram", link: "https://www.instagram.com/daniellbili/" },
+  { iconId: "Telegram", link: "https://t.me/Grootoportunities" },
+];
 
 const coordinatorsData = [
   {
@@ -106,7 +110,7 @@ export const Contacts: React.FC = () => {
               })}
             </S.Coordinators>
           </S.Contact>
-          <Socials iconId={iconsSocial} />
+          <Socials socialItems={socialItems} />
         </FlexWrapper>
       </Container>
     </S.Contacts>

@@ -52,17 +52,15 @@ export const Main: React.FC = () => {
               ipsum in justo vestibulum vulputate.
             </S.Description>
             <S.RegisterButtons>
-              <Button>
-                <NavLink
-                  activeClass={"active"}
-                  smooth
-                  to={"projects"}
-                  spy
-                  offset={-10}
-                >
-                  See Projects
-                </NavLink>
-              </Button>
+              <NavLink
+                activeClass={"active"}
+                smooth
+                to={"projects"}
+                spy
+                offset={-10}
+              >
+                <Button>See Projects</Button>
+              </NavLink>
               <NavLink to={"#"}>Download Resume</NavLink>
             </S.RegisterButtons>
           </S.InfoWrapper>

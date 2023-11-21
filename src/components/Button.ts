@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Theme } from "../styles/Theme";
-import { NavLink } from "./Link";
 
 export const Button = styled.button`
   border-radius: 20px;
@@ -11,20 +10,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   padding: 15px 40px;
 
-  ${NavLink} {
-    color: ${Theme.colors.secondary};
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    @media ${Theme.media.mobile} {
-      font-size: 8px;
-      white-space: nowrap;
-    }
-  }
-
-  &:hover,
-  &:active {
+  &:hover {
     background: ${Theme.colors.buttonActive};
     transition: ${Theme.animations.transitions.regular};
   }
@@ -35,6 +21,5 @@ export const Button = styled.button`
 
   @media ${Theme.media.mobile} {
     font-size: 12px;
-    //padding: 0;
   }
 `;

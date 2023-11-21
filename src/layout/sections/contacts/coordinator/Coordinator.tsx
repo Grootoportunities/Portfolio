@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
-import { Theme } from "../../../../styles/Theme";
+import { S } from "../Contacts_Styles";
 
 type CoordinatorPropsType = {
   iconId: string;
@@ -10,53 +9,17 @@ type CoordinatorPropsType = {
   extraText?: string;
 };
 
-export const Coordinator = (props: CoordinatorPropsType) => {
+export const Coordinator: React.FC<CoordinatorPropsType> = (
+  props: CoordinatorPropsType,
+) => {
   return (
-    <StyledCoordinator>
+    <S.Coordinator>
       <Icon iconId={props.iconId} viewBox={"0 0 50 25"} />
-      <Info>
-        <CoordinatorTitle>{props.title}</CoordinatorTitle>
-        <CoordinatorText>{props.text}</CoordinatorText>
-        <CoordinatorText>{props.extraText}</CoordinatorText>
-      </Info>
-    </StyledCoordinator>
+      <S.Info>
+        <S.CoordinatorTitle>{props.title}</S.CoordinatorTitle>
+        <S.CoordinatorText>{props.text}</S.CoordinatorText>
+        <S.CoordinatorText>{props.extraText}</S.CoordinatorText>
+      </S.Info>
+    </S.Coordinator>
   );
 };
-
-const StyledCoordinator = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const CoordinatorTitle = styled.h4`
-  color: ${Theme.colors.font.secondary.darker};
-  font-size: 16px;
-  font-weight: 500;
-
-  @media ${Theme.media.tablet} {
-    font-size: 30px;
-  }
-
-  @media ${Theme.media.mobile} {
-    font-size: 18px;
-  }
-`;
-
-const CoordinatorText = styled.span`
-  color: ${Theme.colors.font.secondary.dark};
-  font-size: 12px;
-  font-weight: 400;
-
-  @media ${Theme.media.tablet} {
-    font-size: 23px;
-  }
-
-  @media ${Theme.media.mobile} {
-    font-size: 14px;
-  }
-`;
-
-const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-`;

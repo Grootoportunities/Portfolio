@@ -1,51 +1,26 @@
 import React from "react";
-import styled from "styled-components";
 import { Icon } from "../icon/Icon";
-import { Theme } from "../../styles/Theme";
+import { S } from "./Socials_Styles";
 
-export const Socials = (props: { iconId: Array<string> }) => {
+export const Socials: React.FC<{ iconId: Array<string> }> = (props: {
+  iconId: Array<string>;
+}) => {
   return (
-    <StyledSocials>
+    <S.Socials>
       {props.iconId.map((item, index) => {
         return (
-          <SocialItem key={index}>
-            <SocialLink href=" " key={index}>
+          <S.SocialItem key={index}>
+            <S.SocialLink href=" " key={index}>
               <Icon
                 width="50"
                 height={"50"}
                 viewBox={"0 0 25 25"}
                 iconId={item}
               />
-            </SocialLink>
-          </SocialItem>
+            </S.SocialLink>
+          </S.SocialItem>
         );
       })}
-    </StyledSocials>
+    </S.Socials>
   );
 };
-
-const StyledSocials = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-`;
-
-const SocialLink = styled.a`
-  background-color: rgba(188, 203, 246, 0.4);
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${Theme.colors.socialIcons};
-  transition: ${Theme.animations.transitions.regular};
-
-  &:hover {
-    color: ${Theme.colors.accent};
-    transform: translateY(-4px);
-  }
-`;
-
-const SocialItem = styled.li``;

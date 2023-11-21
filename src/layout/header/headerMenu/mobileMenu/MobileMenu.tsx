@@ -1,0 +1,131 @@
+import React, { useState } from "react";
+import { S } from "../HeaderMenu_Styles";
+import { Menu } from "../menu/Menu";
+
+type MobileMenuPropsType = {
+  menuItems: Array<{
+    title: string;
+    hrefItem: string;
+  }>;
+  offset: number;
+};
+
+export const MobileMenu: React.FC<MobileMenuPropsType> = (
+  props: MobileMenuPropsType,
+) => {
+  const [menuIsOpen, setmenuIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {
+    setmenuIsOpen(!menuIsOpen);
+  };
+  return (
+    <S.MobileMenu>
+      <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
+        <span></span>
+      </S.BurgerButton>
+      <S.MobileMenuPopUp
+        isOpen={menuIsOpen}
+        onClick={() => {
+          setmenuIsOpen(false);
+        }}
+      >
+        <Menu menuItems={props.menuItems} offset={props.offset} />
+      </S.MobileMenuPopUp>
+    </S.MobileMenu>
+  );
+};
+
+// const ListItem = styled.li`
+//   position: relative;
+//
+//   &:hover {
+//     letter-spacing: 5px;
+//
+//     &::before,
+//     &::after {
+//       transform: scale(1);
+//     }
+//   }
+//
+//   &:active {
+//     transform: translateY(2px);
+//   }
+//
+//   &::before {
+//     content: "";
+//     display: inline-block;
+//     height: 3px;
+//     background-color: ${Theme.colors.font.pramiary.light};
+//
+//     position: absolute;
+//     top: 130%;
+//     right: -10px;
+//     left: -10px;
+//     z-index: 1;
+//
+//     transform: scale(0);
+//   }
+//
+//   &::after {
+//     content: "";
+//     display: inline-block;
+//     height: 3px;
+//     background-color: ${Theme.colors.font.pramiary.light};
+//
+//     position: absolute;
+//     bottom: 130%;
+//     right: -10px;
+//     left: -10px;
+//     z-index: 1;
+//
+//     transform: scale(0);
+//   }
+//
+//   ${NavLink} {
+//     color: ${Theme.colors.font.pramiary.light};
+//     text-align: center;
+//     font-size: 20px;
+//     font-weight: 400;
+//     &::before {
+//       content: "";
+//       display: inline-block;
+//       height: 3px;
+//       background-color: ${Theme.colors.font.pramiary.light};
+//
+//       position: absolute;
+//       top: 130%;
+//       right: -10px;
+//       left: -10px;
+//       z-index: 1;
+//
+//       transform: scale(0);
+//     }
+//
+//     &::after {
+//       content: "";
+//       display: inline-block;
+//       height: 3px;
+//       background-color: ${Theme.colors.font.pramiary.light};
+//
+//       position: absolute;
+//       bottom: 130%;
+//       right: -10px;
+//       left: -10px;
+//       z-index: 1;
+//
+//       transform: scale(0);
+//     }
+//
+//     &:hover {
+//       letter-spacing: 5px;
+//
+//       &::before,
+//       &::after {
+//         transform: scale(1);
+//       }
+//     }
+//
+//     &:active {
+//       transform: translateY(2px);
+//     }
+//   }
+// `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../styles/Theme";
-import { NavLink } from "./link/Link";
+import { NavLink } from "./Link";
 
 export const Button = styled.button`
   border-radius: 20px;

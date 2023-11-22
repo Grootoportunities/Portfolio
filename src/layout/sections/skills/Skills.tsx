@@ -12,11 +12,11 @@ const skillData = [
     iconId: "React",
     viewBox: "0 0 50 50",
   },
-  {
-    title: "Redux",
-    iconId: "Redux",
-    viewBox: "0 0 32 35",
-  },
+  // {
+  //   title: "Redux",
+  //   iconId: "Redux",
+  //   viewBox: "0 0 32 35",
+  // },
   {
     title: "TypeScript",
     iconId: "TypeScript",

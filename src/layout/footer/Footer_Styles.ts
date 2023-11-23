@@ -6,6 +6,22 @@ import wave from "../../assets/images/wave.svg";
 const Footer = styled.footer`
   background-color: ${Theme.colors.primary};
   padding-bottom: 40px;
+  position: relative;
+  z-index: -1;
+  margin-top: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(${wave}) repeat-x center top;
+    width: 100%;
+    height: 100%;
+    top: -50px;
+
+    @media ${Theme.media.mobile} {
+      top: -25px;
+    }
+  }
 
   @media ${Theme.media.tablet} {
     padding-bottom: 10px;

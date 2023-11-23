@@ -1,10 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
-
-type StyledProjectPropsType = {
-  imgSrc: string;
-};
+import dots from "./../../../assets/images/dots.svg";
 
 // Projects
 
@@ -13,48 +10,44 @@ const Projects = styled.section`
   position: relative;
   z-index: 1;
 
-  // &::before {
-  //   content: url(../../../../public/assets/svg/dots.svg);
-  //   display: inline-block;
-  //   width: 413px;
-  //   height: 505px;
-  //
-  //   position: absolute;
-  //   z-index: -1;
-  //   top: 85px;
-  //   left: 127px;
-  // }
-  //
-  // &::after {
-  //   content: "+";
-  //   display: inline-block;
-  //   transform: rotate(-45deg);
-  //   color: rgba(33, 87, 242, 0.1);
-  //   position: absolute;
-  //   text-align: center;
-  //   font-family: Roboto;
-  //   font-size: 550px;
-  //   font-style: normal;
-  //   font-weight: 600;
-  //   line-height: 136%; /* 748px */
-  //   right: 0;
-  //   bottom: 0;
-  //   z-index: -1;
-  //   position: absolute;
-  // }
-  //
-  // @media ${Theme.media.tablet} {
-  //   &::before,
-  //   &::after {
-  //     display: none;
-  //   }
-  // }
+  &::before {
+    content: url(${dots});
+    display: inline-block;
+
+    position: absolute;
+    z-index: 0;
+    top: 85px;
+    left: 127px;
+
+    @media ${Theme.media.tablet} {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "+";
+    display: inline-block;
+    transform: rotate(-45deg);
+    color: rgba(33, 87, 242, 0.1);
+    position: absolute;
+    font-size: 550px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 136%; /* 748px */
+    right: 0;
+    bottom: -200px;
+    z-index: -1;
+
+    @media ${Theme.media.tablet} {
+      display: none;
+    }
+  }
 `;
 
 // Project
 
 const ProjectButtons = styled.div`
-  margin: 100px 0 30px;
+  flex-grow: 1;
 
   ${Button} {
     padding: 20px 60px;
@@ -62,17 +55,23 @@ const ProjectButtons = styled.div`
 `;
 
 const DescriptionWrapper = styled.div`
-  padding: 17px 33px 23px;
+  flex-grow: 1;
 `;
 
-const Project = styled.article<StyledProjectPropsType>`
+const Project = styled.article<{ imgSrc: string }>`
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  gap: 60px;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
     url(${(props) => props.imgSrc});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  width: 100%; //330px; todo: Не работает с флекс гроу, разобраться
+  width: 100%;
+  min-height: 450px;
 
   flex-grow: 1;
   border-radius: 26px;
@@ -120,11 +119,13 @@ const Project = styled.article<StyledProjectPropsType>`
   }
 
   @media ${Theme.media.desktop} {
-    max-width: 540px; //todo: Не получается для десктопов :c
+    max-width: 540px;
+    min-height: 400px;
   }
 
   @media ${Theme.media.tablet} {
-    //todo: Какого хуя не работаешь??????
+    min-height: 500px;
+
     ${ProjectButtons} {
       opacity: 1;
     }
@@ -149,6 +150,18 @@ const Description = styled.p`
   color: ${Theme.colors.skill};
 `;
 
+const Link = styled.a<{
+  projectBtn?: boolean;
+}>`
+  ${(props) =>
+    props.projectBtn === false &&
+    css<{
+      projectBtn?: boolean;
+    }>`
+      display: none;
+    `}
+`;
+
 export const S = {
   Projects,
   ProjectButtons,
@@ -156,4 +169,5 @@ export const S = {
   Project,
   Title,
   Description,
+  Link,
 };

@@ -7,6 +7,9 @@ type ProjectPropsType = {
   imgSrc: string;
   title: string;
   description: string;
+  codeLink: string;
+  projectLink: string;
+  projectBtn?: boolean;
 };
 
 export const Project: React.FC<ProjectPropsType> = (
@@ -21,8 +24,16 @@ export const Project: React.FC<ProjectPropsType> = (
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Button>VIEW CODE</Button>
-          <Button>VIEW PROJECT</Button>
+          <S.Link href={props.codeLink} target={"_blank"}>
+            <Button>VIEW CODE</Button>
+          </S.Link>
+          <S.Link
+            href={props.projectLink}
+            target={"_blank"}
+            projectBtn={props.projectBtn}
+          >
+            <Button>VIEW PROJECT</Button>
+          </S.Link>
         </FlexWrapper>
       </S.ProjectButtons>
       <S.DescriptionWrapper>

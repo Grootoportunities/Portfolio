@@ -222,6 +222,7 @@ const Main = styled.section`
 
   @media ${Theme.media.tablet} {
     padding: 123px 100px 90px 80px;
+    min-height: 0;
   }
 
   @media ${Theme.media.mobile} {

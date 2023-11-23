@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
 import logoImage from "../../assets/logo/Logo__3_-removebg-preview-_1_.webp";
+import wave from "../../assets/images/wave.svg";
 
 const Footer = styled.footer`
   background-color: ${Theme.colors.primary};
-  padding: 40px 0;
+  padding-bottom: 40px;
 
   @media ${Theme.media.tablet} {
-    padding: 0 0 10px;
+    padding-bottom: 10px;
   }
 `;
 

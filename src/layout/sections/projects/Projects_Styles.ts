@@ -41,7 +41,7 @@ const Projects = styled.section`
     font-style: normal;
     font-weight: 600;
     line-height: 136%; /* 748px */
-    right: 0;
+    right: 230px;
     bottom: -200px;
     z-index: -1;
 

@@ -1,25 +1,23 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/Portfolio/static/js/main.3640fea8.js",
+    "main.js": "/Portfolio/static/js/main.91dc3730.js",
     "static/js/787.25eaef86.chunk.js": "/Portfolio/static/js/787.25eaef86.chunk.js",
     "static/media/icons-sprite.svg": "/Portfolio/static/media/icons-sprite.ce713c143498fbda256c803754ccdd22.svg",
-    "static/media/social-networking-184313840_384936-_1_.webp": "/Portfolio/static/media/social-networking-184313840_384936-_1_.d61fd13e9beb90b2d4e9.webp",
     "static/media/github-desktop-2021-05-20.webp": "/Portfolio/static/media/github-desktop-2021-05-20.44eab1eddf52a6971b2c.webp",
+    "static/media/dots.svg": "/Portfolio/static/media/dots.80336227c9e5a108b02b92d55c605729.svg",
     "static/media/photo_2023-10-23_15-19-26cut.jpg": "/Portfolio/static/media/photo_2023-10-23_15-19-26cut.45373510cba203ca16dd.jpg",
-    "static/media/animal-memory-card-game_1308-113025-_1_.webp": "/Portfolio/static/media/animal-memory-card-game_1308-113025-_1_.d73eef0c5b830b5c3382.webp",
     "static/media/173543381_545605816406879__n-_1_.webp": "/Portfolio/static/media/173543381_545605816406879_8761131686456400960_n-_1_.c66325aedbddd417d111.webp",
-    "static/media/smart-home-app_23-2148620419-_1_.webp": "/Portfolio/static/media/smart-home-app_23-2148620419-_1_.746066e0f0ff3f149bc8.webp",
+    "static/media/portfolio.webp": "/Portfolio/static/media/portfolio.509c9eb4fad3890025da.webp",
     "static/media/Visual_Studio_Code_1.35_icon.svg.webp": "/Portfolio/static/media/Visual_Studio_Code_1.35_icon.svg.b04a2a037e2733a009b7.webp",
     "static/media/WebStorm_Icon.svg.webp": "/Portfolio/static/media/WebStorm_Icon.svg.521816889dc688cd131c.webp",
-    "static/media/hand-drawn-essay-illustration_23-2150292643-_1_.webp": "/Portfolio/static/media/hand-drawn-essay-illustration_23-2150292643-_1_.58a4d6edb4eea2f0db11.webp",
     "static/media/Logo__3_-removebg-preview-_1_.webp": "/Portfolio/static/media/Logo__3_-removebg-preview-_1_.676adcf70b8f67ee4cb0.webp",
     "index.html": "/Portfolio/index.html",
-    "main.3640fea8.js.map": "/Portfolio/static/js/main.3640fea8.js.map",
+    "main.91dc3730.js.map": "/Portfolio/static/js/main.91dc3730.js.map",
     "787.25eaef86.chunk.js.map": "/Portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.3640fea8.js"
+    "static/js/main.91dc3730.js"
   ]
 }

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
-import photo from "../../../assets/images/173543381_545605816406879_8761131686456400960_n-_1_.webp";
+import mainPic from "../../../assets/images/main/mainPic.webp";
+import mainPic2x from "../../../assets/images/main/mainPic@2x.webp";
+import mainPic3x from "../../../assets/images/main/mainPic@3x.webp";
+import mainPic4x from "../../../assets/images/main/mainPic@4x.webp";
 
 //Main
 
@@ -95,9 +98,7 @@ const Description = styled.p`
   max-width: 376px;
   width: 100%;
 
-  ${font({ Fmax: 20, Fmin: 14 })}
-
-  @media ${Theme.media.tablet} {
+  ${font({ Fmax: 20, Fmin: 14 })} @media ${Theme.media.tablet} {
     margin-bottom: 30px;
   }
 
@@ -107,8 +108,9 @@ const Description = styled.p`
 `;
 
 const Photo = styled.img.attrs(() => ({
-  src: photo,
+  src: mainPic,
   alt: "Photo",
+  srcSet: `${mainPic2x} 2x, ${mainPic3x} 3x, ${mainPic4x} 4x`,
 }))`
   max-width: 400px;
   width: 100%;
@@ -242,6 +244,13 @@ const InfoWrapper = styled.div`
   }
 `;
 
+const Link = styled.a`
+  ${font({ color: Theme.colors.accent, weight: 600, Fmax: 16, Fmin: 12 })}
+
+  text-transform: uppercase;
+  text-align: center;
+`;
+
 //MobileApps
 
 const MobileApps = styled.section`
@@ -305,10 +314,7 @@ const Title = styled.h3`
   ${font({
     color: Theme.colors.font.secondary.lighter,
     weight: 600,
-    // Fmax: 34,
-    // Fmin: 18, //todo: при миксине слетают стили
-  })}
-  @media ${Theme.media.tablet} {
+  })} @media ${Theme.media.tablet} {
     font-size: 34px;
   }
 
@@ -405,4 +411,5 @@ export const S = {
   AppImg,
   Title,
   App,
+  Link,
 };

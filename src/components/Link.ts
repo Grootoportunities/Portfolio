@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import { Theme } from "../styles/Theme";
 import { Link } from "react-scroll";
+import { font } from "../styles/Common";
 
 export const NavLink = styled(Link)`
-  color: ${Theme.colors.accent};
-  font-size: 16px;
-  font-weight: 600;
+  ${font({ color: Theme.colors.accent, weight: 600, Fmax: 16, Fmin: 12 })}
+
   text-transform: uppercase;
   text-align: center;
-
-  @media ${Theme.media.mobile} {
-    font-size: 8px;
-  }
 `;

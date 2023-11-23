@@ -19,39 +19,32 @@ const tabItems: Array<{
 
 const biographyItems = [
   {
-    title: "Front-end developer",
+    title: "Front-End Developer",
     pastTitle: "Development",
-    description: "React / Redux / Type Script",
+    description: "React / TypeScript",
     type: "main",
     id: 1,
   },
   {
-    title: "User experience development",
+    title: "User Experience Development",
     pastTitle: "Development",
-    description: "Delight the user and make it work.",
+    description: "Delight the user and make it work",
     type: "main",
     id: 2,
   },
+  // {
+  //   title: "Interaction design ",
+  //   pastTitle: "Development",
+  //   description: "Use of different UI libraries",
+  //   type: "main",
+  //   id: 3,
+  // },
   {
-    title: "Interaction design ",
-    pastTitle: "Development",
-    description: "Use of different UI libraries",
-    type: "main",
-    id: 3,
-  },
-  {
-    title: "Front-end developer",
-    pastTitle: "Learning app “Memorization Cards",
-    description: "02/2022 - present",
+    title: "Front-End Developer",
+    pastTitle: "Portfolio",
+    description: "10/2023 - 11/2023",
     type: "experience",
     id: 4,
-  },
-  {
-    title: "Front-end developer",
-    pastTitle: "Social project “Ta Na”",
-    description: "08/2021 - 02/2022",
-    type: "experience",
-    id: 5,
   },
   {
     title: "Front-End Developer",
@@ -74,23 +67,23 @@ const skillsItems = [
     text: "Creation Web apps using ReactJs with TypeScript and various libraries",
     id: 1,
   },
-  { text: "Using Redux and Redux-toolkit to manage application state", id: 2 },
+  // { text: "Using Redux and Redux-toolkit to manage application state", id: 2 },
   {
-    text: "Cross-browser, adaptive, responsive development with CSS-preprocessors, Material UI and Design libraries",
+    text: "Cross-browser, adaptive, responsive development with CSS-preprocessors",
     id: 3,
   },
-  {
-    text: "Implementation of multilingual application using localization management platform",
-    id: 4,
-  },
-  {
-    text: "Сheck the correctness of the code with Unit Tests and take Storybook for demonstration of individual modules of the application",
-    id: 5,
-  },
-  {
-    text: "Creation of applications with login and registration forms, as well as functionality with the ability to add, delete, change and filter data.",
-    id: 6,
-  },
+  // {
+  //   text: "Implementation of multilingual application using localization management platform",
+  //   id: 4,
+  // },
+  // {
+  //   text: "Сheck the correctness of the code with Unit Tests and take Storybook for demonstration of individual modules of the application",
+  //   id: 5,
+  // },
+  // {
+  //   text: "Creation of applications with login and registration forms, as well as functionality with the ability to add, delete, change and filter data.",
+  //   id: 6,
+  // },
 ];
 
 export const Biography: React.FC = () => {

@@ -5,6 +5,9 @@ import { S } from "../Projects_Styles";
 
 type ProjectPropsType = {
   imgSrc: string;
+  imgSrc2x?: string;
+  imgSrc3x?: string;
+  imgSrc4x?: string;
   title: string;
   description: string;
   codeLink: string;
@@ -16,7 +19,12 @@ export const Project: React.FC<ProjectPropsType> = (
   props: ProjectPropsType,
 ) => {
   return (
-    <S.Project imgSrc={props.imgSrc}>
+    <S.Project
+      imgSrc={props.imgSrc}
+      imgSrc2x={props.imgSrc2x}
+      imgSrc3x={props.imgSrc3x}
+      imgSrc4x={props.imgSrc4x}
+    >
       <S.ProjectButtons>
         <FlexWrapper
           gap={"20px"}

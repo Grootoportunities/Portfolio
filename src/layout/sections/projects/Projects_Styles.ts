@@ -3,6 +3,13 @@ import { Theme } from "../../../styles/Theme";
 import { Button } from "../../../components/Button";
 import dots from "./../../../assets/images/dots.svg";
 
+type ProjectPropsStyle = {
+  imgSrc: string;
+  imgSrc2x?: string;
+  imgSrc3x?: string;
+  imgSrc4x?: string;
+};
+
 // Projects
 
 const Projects = styled.section`
@@ -58,7 +65,7 @@ const DescriptionWrapper = styled.div`
   flex-grow: 1;
 `;
 
-const Project = styled.article<{ imgSrc: string }>`
+const Project = styled.article<ProjectPropsStyle>`
   display: flex;
   flex-direction: column;
   padding: 50px 30px;
@@ -111,6 +118,21 @@ const Project = styled.article<{ imgSrc: string }>`
     &::before {
       opacity: 1;
     }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc2x});
+    }
+
+    @media (min-resolution: 3dppx), (-webkit-min-device-pixel-ratio: 3) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc3x});
+    }
+
+    @media (min-resolution: 4dppx), (-webkit-min-device-pixel-ratio: 4) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc4x});
+    }
   }
 
   ${ProjectButtons} {
@@ -124,7 +146,7 @@ const Project = styled.article<{ imgSrc: string }>`
   }
 
   @media ${Theme.media.tablet} {
-    min-height: 500px;
+    min-height: 340px;
 
     ${ProjectButtons} {
       opacity: 1;
@@ -136,6 +158,40 @@ const Project = styled.article<{ imgSrc: string }>`
     &::before {
       opacity: 1;
     }
+
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc2x});
+    }
+
+    @media (min-resolution: 3dppx), (-webkit-min-device-pixel-ratio: 3) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc3x});
+    }
+
+    @media (min-resolution: 4dppx), (-webkit-min-device-pixel-ratio: 4) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+        url(${(props) => props.imgSrc4x});
+    }
+  }
+
+  @media ${Theme.media.mobile} {
+    min-height: 400px;
+  }
+
+  @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+      url(${(props) => props.imgSrc2x});
+  }
+
+  @media (min-resolution: 3dppx), (-webkit-min-device-pixel-ratio: 3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+      url(${(props) => props.imgSrc3x});
+  }
+
+  @media (min-resolution: 4dppx), (-webkit-min-device-pixel-ratio: 4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+      url(${(props) => props.imgSrc4x});
   }
 `;
 

@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
-import me from "../../../assets/images/photo_2023-10-23_15-19-26cut.jpg";
+import biographyPic from "../../../assets/images/biography/biographyPic.jpg";
+import biographyPic2x from "../../../assets/images/biography/biographyPic@2x.webp";
+import biographyPic3x from "../../../assets/images/biography/biographyPic@3x.webp";
+import biographyPic4x from "../../../assets/images/biography/biographyPic@4x.webp";
 import { font } from "../../../styles/Common";
 import { NavLink } from "../../../components/Link";
 
@@ -52,8 +55,9 @@ const Information = styled.article`
 `;
 
 const MeImg = styled.img.attrs(() => ({
-  src: me,
+  src: biographyPic,
   alt: "Me",
+  srcSet: `${biographyPic2x} 2x, ${biographyPic3x} 3x, ${biographyPic4x} 4x, `,
 }))`
   max-width: 450px;
   width: 100%;

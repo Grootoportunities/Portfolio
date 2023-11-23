@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { Theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const Button = styled.button`
+  ${font({ color: Theme.colors.secondary, weight: 600, Fmax: 16, Fmin: 12 })}
+
   border-radius: 20px;
   background-color: ${Theme.colors.accent};
-  color: ${Theme.colors.secondary};
-  font-size: 16px;
-  font-weight: 600;
   text-transform: uppercase;
   padding: 15px 40px;
 
@@ -17,9 +17,5 @@ export const Button = styled.button`
 
   &:active {
     transform: translateY(5px);
-  }
-
-  @media ${Theme.media.mobile} {
-    font-size: 12px;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
-import logoImage from "../../assets/images/Logo__3_-removebg-preview-_1_.webp";
+import logoImage from "../../assets/logo/Logo__3_-removebg-preview-_1_.webp";
 
 const Footer = styled.footer`
   background-color: ${Theme.colors.primary};

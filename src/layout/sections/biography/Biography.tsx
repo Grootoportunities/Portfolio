@@ -92,33 +92,33 @@ export const Biography: React.FC = () => {
   const renderText = (filterType: string) => {
     if (currentFilterStatus === "skills") {
       return skillsItems.map((item) => (
-        <motion.div
-          layout
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          key={item.id}
-        >
-          <S.SkillsInfo key={item.id}>{item.text}</S.SkillsInfo>
-        </motion.div>
+        // <motion.div
+        //   layout
+        //   initial={{ opacity: 0 }}
+        //   animate={{ opacity: 1 }}
+        //   exit={{ opacity: 0 }}
+        //   key={item.id}
+        // >
+        <S.SkillsInfo key={item.id}>{item.text}</S.SkillsInfo>
+        // </motion.div>
       ));
     } else {
       return biographyItems
         .filter((info) => info.type === filterType)
         .map((item) => {
           return (
-            <motion.div
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              key={item.id}
-            >
-              <S.BiographyInfo key={item.id}>
-                <span>{item.title}</span> - {item.pastTitle}
-                <p>{item.description}</p>
-              </S.BiographyInfo>
-            </motion.div>
+            // <motion.div
+            //   layout
+            //   initial={{ opacity: 0 }}
+            //   animate={{ opacity: 1 }}
+            //   exit={{ opacity: 0 }}
+            //   key={item.id}
+            // >
+            <S.BiographyInfo key={item.id}>
+              <span>{item.title}</span> - {item.pastTitle}
+              <p>{item.description}</p>
+            </S.BiographyInfo>
+            // </motion.div>
           );
         });
     }
@@ -156,9 +156,9 @@ export const Biography: React.FC = () => {
                 changeFilterStatus={changeFilterStatus}
                 currentFilterStatus={currentFilterStatus}
               />
-              <AnimatePresence>
-                {renderText(currentFilterStatus)}
-              </AnimatePresence>
+              {/*<AnimatePresence>*/}
+              {renderText(currentFilterStatus)}
+              {/*</AnimatePresence>*/}
             </FlexWrapper>
           </S.Information>
           <Tilt

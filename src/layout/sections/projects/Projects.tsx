@@ -12,7 +12,7 @@ import portfolio4x from "./../../../assets/images/projects/portfolio/portfolio@4
 
 const projectData = [
   {
-    title: "THIS PORTFOLIO",
+    title: "PORTFOLIO",
     description:
       "My very first project that you are currently in. Designed using Styled Components library.",
     imgSrc: portfolio,

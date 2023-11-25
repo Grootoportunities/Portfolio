@@ -29,7 +29,7 @@ const Biography = styled.section`
 `;
 
 const Information = styled.article`
-  min-height: 100vh;
+  min-height: 700px;
   height: 100%;
 
   background-image: linear-gradient(
@@ -50,7 +50,6 @@ const Information = styled.article`
   @media ${Theme.media.mobile} {
     border-radius: 110px 0;
     padding: 50px 30px 30px;
-    min-height: 100vh;
   }
 `;
 

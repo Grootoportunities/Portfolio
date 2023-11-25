@@ -84,6 +84,7 @@ const Project = styled.article<ProjectPropsStyle>`
   border-radius: 26px;
   box-shadow: 5px 6px 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 0;
+  transition: ${Theme.animations.transitions.regular};
 
   position: relative;
 
@@ -104,9 +105,6 @@ const Project = styled.article<ProjectPropsStyle>`
   }
 
   &:hover {
-    //max-width: 550px;
-    //height: 520px; todo: Сделать так чтобы увелечение было из центра
-
     ${ProjectButtons} {
       opacity: 1;
       transition: ${Theme.animations.transitions.regular};
@@ -115,8 +113,14 @@ const Project = styled.article<ProjectPropsStyle>`
     background-image: linear-gradient(rgba(103, 138, 255, 0.47), rgb(0, 0, 0)),
       url(${(props) => props.imgSrc});
 
+    transform: scale(1.08) translateZ(0);
+
     &::before {
       opacity: 1;
+    }
+
+    @media ${Theme.media.tablet} {
+      transform: none;
     }
 
     @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {

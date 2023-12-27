@@ -8,12 +8,13 @@ const Contacts = styled.section`
   position: relative;
 `;
 
-const Contact = styled.article`
+const Contact = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 130px;
+  border-radius: 10px;
 
   box-shadow: 8px 8px 34px 0 rgba(0, 0, 0, 0.05);
 

@@ -21,8 +21,10 @@ font-family: ${family || "Roboto"};
 font-weight: ${weight || 400};
 color: ${color || Theme.colors.font.pramiary.dark};
 line-height: ${lineHeight || 1.2};
-font-size: calc((100vw - 360px)/(1920 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+font-size: clamp(${Fmin}px, calc((100vw - 360px)/(1920 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px), ${Fmax}px);
 `;
+
+//font-size: clamp(${Fmin}, calc((100vw - 360px)/(1920 - 360) * (${Fmax} - ${Fmin} + ${Fmin}px)), ${Fmax});
 
 // Vmax(1440) - Наибольшее разрешение экрана (в данном случае для десктопа)
 // Vmin(360) - Наименьшее разрешение экрана (в данном случае для мобилок)

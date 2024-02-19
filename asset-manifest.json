@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/Portfolio/static/js/main.2ae4854c.js",
+    "main.js": "/Portfolio/static/js/main.1489de21.js",
     "static/js/787.25eaef86.chunk.js": "/Portfolio/static/js/787.25eaef86.chunk.js",
     "static/media/mainPic@4x.webp": "/Portfolio/static/media/mainPic@4x.83f0ba3e058172bc556d.webp",
     "static/media/mainPic@3x.webp": "/Portfolio/static/media/mainPic@3x.d760819b7efd55aaf9de.webp",
     "static/media/mainPic@2x.webp": "/Portfolio/static/media/mainPic@2x.e8aff2f9d40dba3c6c15.webp",
     "static/media/portfolio@4x.webp": "/Portfolio/static/media/portfolio@4x.f0caa112a97e887c6468.webp",
     "static/media/portfolio@3x.webp": "/Portfolio/static/media/portfolio@3x.67b454307c87c14c2704.webp",
+    "static/media/counter.webp": "/Portfolio/static/media/counter.3542b22b551807f3ae5b.webp",
     "static/media/biographyPic@4x.webp": "/Portfolio/static/media/biographyPic@4x.5288f940e5894440bbe9.webp",
     "static/media/portfolio@2x.webp": "/Portfolio/static/media/portfolio@2x.1d530e54b7bd1d17ee55.webp",
     "static/media/biographyPic@3x.webp": "/Portfolio/static/media/biographyPic@3x.bb1b17759d18f5e05555.webp",
     "static/media/biographyPic@2x.webp": "/Portfolio/static/media/biographyPic@2x.154975f674a90b59d465.webp",
     "static/media/icons-sprite.svg": "/Portfolio/static/media/icons-sprite.ce713c143498fbda256c803754ccdd22.svg",
     "static/media/github-desktop-2021-05-20.webp": "/Portfolio/static/media/github-desktop-2021-05-20.44eab1eddf52a6971b2c.webp",
+    "static/media/counterWithRedux.webp": "/Portfolio/static/media/counterWithRedux.086df8612c602e824748.webp",
     "static/media/dots.svg": "/Portfolio/static/media/dots.80336227c9e5a108b02b92d55c605729.svg",
     "static/media/biographyPic.jpg": "/Portfolio/static/media/biographyPic.45373510cba203ca16dd.jpg",
     "static/media/mainPic.webp": "/Portfolio/static/media/mainPic.c66325aedbddd417d111.webp",
@@ -23,11 +25,11 @@
     "static/media/Logo__3_-removebg-preview-_1_.webp": "/Portfolio/static/media/Logo__3_-removebg-preview-_1_.676adcf70b8f67ee4cb0.webp",
     "index.html": "/Portfolio/index.html",
     "static/media/wave.svg": "/Portfolio/static/media/wave.7e23d3eb67e6d95b5243bbea39b720c3.svg",
-    "main.2ae4854c.js.map": "/Portfolio/static/js/main.2ae4854c.js.map",
+    "main.1489de21.js.map": "/Portfolio/static/js/main.1489de21.js.map",
     "787.25eaef86.chunk.js.map": "/Portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.2ae4854c.js"
+    "static/js/main.1489de21.js"
   ]
 }

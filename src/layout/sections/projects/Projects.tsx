@@ -10,6 +10,9 @@ import portfolio2x from "./../../../assets/images/projects/portfolio/portfolio@2
 import portfolio3x from "./../../../assets/images/projects/portfolio/portfolio@3x.webp";
 import portfolio4x from "./../../../assets/images/projects/portfolio/portfolio@4x.webp";
 
+import counter from "./../../../assets/images/counter.webp";
+import counterWithRedux from "./../../../assets/images/counterWithRedux.webp";
+
 const projectData = [
   {
     title: "PORTFOLIO",
@@ -22,6 +25,23 @@ const projectData = [
     codeLink: "https://github.com/Grootoportunities/Portfolio.git",
     projectLink: "#home",
     projectBtn: false,
+  },
+  {
+    title: "COUNTER",
+    description: "Simple project with increasing and decreasing values",
+    imgSrc: counter,
+    codeLink: "https://github.com/Grootoportunities/counter",
+    projectLink: "https://grootoportunities.github.io/counter/",
+    projectBtn: true,
+  },
+  {
+    title: "COUNTER WITH REDUX",
+    description:
+      "My experience of working with redux using the example of counter",
+    imgSrc: counterWithRedux,
+    codeLink: "https://github.com/Grootoportunities/counter-with-redux",
+    projectLink: "https://grootoportunities.github.io/counter-with-redux/",
+    projectBtn: true,
   },
 ];
 

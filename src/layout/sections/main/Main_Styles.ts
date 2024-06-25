@@ -95,7 +95,7 @@ const MediaMainTitle = styled(MainTitle)`
 `;
 
 const Description = styled.p`
-  max-width: 376px;
+  max-width: 600px;
   width: 100%;
 
   ${font({ Fmax: 20, Fmin: 14 })} @media ${Theme.media.tablet} {

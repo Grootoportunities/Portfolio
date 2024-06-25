@@ -5,6 +5,7 @@ import { Container } from "../../../components/Container";
 import github from "../../../assets/images/apps/github-desktop-2021-05-20.webp";
 import vscode from "../../../assets/images/apps/Visual_Studio_Code_1.35_icon.svg.webp";
 import webstorm from "../../../assets/images/apps/WebStorm_Icon.svg.webp";
+import postman from "../../../assets/images/apps/postman.webp";
 import Typewriter from "typewriter-effect";
 import { Button } from "../../../components/Button";
 import { NavLink } from "../../../components/Link";
@@ -22,6 +23,10 @@ const appData = [
   {
     title: "Github Desktop",
     imgSrc: github,
+  },
+  {
+    title: "Postman",
+    imgSrc: postman,
   },
 ];
 
@@ -48,7 +53,10 @@ export const Main: React.FC = () => {
             </S.MainTitle>
             <S.MediaMainTitle>Front-End Developer</S.MediaMainTitle>
             <S.Description>
-              I still can’t figure out what to write here
+              Passionate front-end developer with a flair for crafting engaging
+              user interfaces that provide users with an intuitive and efficient
+              experience. Committed to writing clean, scalable code and staying
+              abreast of the latest technologies in web development
             </S.Description>
             <S.RegisterButtons>
               <NavLink

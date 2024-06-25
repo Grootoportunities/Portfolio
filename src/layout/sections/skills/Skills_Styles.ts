@@ -25,7 +25,7 @@ const SkillTitle = styled.h3`
 
 const Skill = styled.article`
   margin: 20px;
-  width: 90px;
+  width: 95px;
   flex-grow: 1;
 
   position: relative;

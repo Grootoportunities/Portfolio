@@ -12,11 +12,11 @@ const skillData = [
     iconId: "React",
     viewBox: "0 0 50 50",
   },
-  // {
-  //   title: "Redux",
-  //   iconId: "Redux",
-  //   viewBox: "0 0 32 35",
-  // },
+  {
+    title: "Redux",
+    iconId: "Redux",
+    viewBox: "0 0 32 35",
+  },
   {
     title: "TypeScript",
     iconId: "TypeScript",
@@ -46,6 +46,41 @@ const skillData = [
     title: "Styled Components",
     iconId: "StyledComponents",
     viewBox: "0 0 41 41",
+  },
+  {
+    title: "Rest API",
+    iconId: "RestAPI",
+    viewBox: "0 0 48 48",
+  },
+  {
+    title: "Axios",
+    iconId: "Axios",
+    viewBox: "0 0 24 24",
+  },
+  {
+    title: "Unit Tests",
+    iconId: "UnitTests",
+    viewBox: "0 0 24 24",
+  },
+  {
+    title: "Postman",
+    iconId: "Postman",
+    viewBox: "0 0 256 256",
+  },
+  {
+    title: "Storybook",
+    iconId: "Storybook",
+    viewBox: "0 0 24 24",
+  },
+  {
+    title: "Formik",
+    iconId: "Formik",
+    viewBox: "0 0 35 35",
+  },
+  {
+    title: "Material UI",
+    iconId: "MUI",
+    viewBox: "0 0 256 160",
   },
 ];
 

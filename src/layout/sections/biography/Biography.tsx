@@ -41,7 +41,7 @@ const biographyItems = [
   {
     title: "Front-End Developer",
     pastTitle: "Todolist",
-    description: "12/2023 - 06/2024",
+    description: "12/2023 - 05/2024",
     type: "experience",
     id: 5,
   },

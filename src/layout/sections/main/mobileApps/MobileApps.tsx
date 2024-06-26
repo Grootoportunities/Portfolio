@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import vscode from "../../../../assets/images/apps/Visual_Studio_Code_1.35_icon.svg.webp";
 import webstorm from "../../../../assets/images/apps/WebStorm_Icon.svg.webp";
 import github from "../../../../assets/images/apps/github-desktop-2021-05-20.webp";
+import postman from "../../../../assets/images/apps/postman.webp";
 import { Container } from "../../../../components/Container";
 import { S } from "../Main_Styles";
 
@@ -19,6 +20,10 @@ const appData = [
   {
     title: "Github Desktop",
     imgSrc: github,
+  },
+  {
+    title: "Postman",
+    imgSrc: postman,
   },
 ];
 

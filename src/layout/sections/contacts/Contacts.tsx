@@ -12,6 +12,10 @@ const socialItems: Array<{ iconId: string; link: string }> = [
   { iconId: "GitHub", link: "https://github.com/Grootoportunities" },
   { iconId: "Instagram", link: "https://www.instagram.com/daniellbili/" },
   { iconId: "Telegram", link: "https://t.me/Grootoportunities" },
+  {
+    iconId: "LinkedIn",
+    link: "https://www.linkedin.com/in/daniil-lameika-844825284/",
+  },
 ];
 
 const coordinatorsData = [
@@ -29,7 +33,7 @@ const coordinatorsData = [
   {
     iconId: "email",
     title: "Email",
-    text: "tapir1337@mail.ru",
+    text: "daniillameika@gmail.com",
   },
 ];
 
